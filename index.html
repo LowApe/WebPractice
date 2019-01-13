@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+        }
+        div{
+            margin-bottom: 10px;
+        }
+        .abc{
+            width: 200px;
+            height:200px;
+            background-image: linear-gradient(to left,#fa5788,#ffc046,#f9683a 30%);
+        }
+        .abc2{
+            width: 200px;
+            height:200px;
+            background-image: radial-gradient(#c64421, #c4830f);
+            border-radius: 50%;
+            box-shadow: 0px 0px 100px #ffea57;
+            text-align: center;
+        }
+
+
+        .abc2:hover{
+            box-shadow: 0px 0px 100px #ffea57 inset;
+        }
+        .abc3{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to right,#fa5788,#ffea57);
+            border-radius: 50% 0 50% 0;
+        }
+
+        .abc4{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to right,#fa5788,#ffea57);
+            border-radius: 0 0 50% 50%;
+        }
+
+        .abc5{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to right,#fa5788,#ffea57);
+            border-radius: 0 50%  0 50% ;
+        }
+        .block{
+            width: 100px;
+            height: 100px;
+            background-color: #fa5788;
+            display:inline-block;
+            text-align: center;
+            line-height: 100px;
+            /*font-size: 20px;*/
+
+        }
+        .block:hover{
+            height: 90px;
+            background-color: deeppink;
+            border-bottom: 10px solid black;
+        }
+
+        .container{
+
+        }
+
+        .buyGoods{
+            width: 300px;
+            height: 400px;
+            /*border:1px solid red;*/
+            border-radius: 5% 5% 0 0;
+            display: inline-block;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 2px 2px 7px grey;
+        }
+        .buyGoods:hover{
+            box-shadow: 3px 3px 13px grey;
+        }
+        .buyGoods:hover button{
+            visibility: visible;
+        }
+        .buyGoods .image{
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /*border-radius: 5% 5% 0 0;*/
+            background-position:center;
+        }
+        .active{
+            width: 100%;
+        }
+        .buyGoods .image .active span{
+            width: 130px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            color:white;
+            /*border: 1px solid red;*/
+            background-color: #fa5788;
+            /*border-radius: 50%;*/
+            position: relative;
+            transform: rotate(45deg);
+            top: 20px;
+            right:-190px;
+            box-shadow: 2px 2px 12px grey;
+
+        }
+        .buyGoods .detail{
+            width: 100%;
+            height: 35%;
+
+        }
+
+        .buyGoods .detail p,span,h2{
+            padding:7px;
+        }
+        .buyGoods button{
+            width: 100%;
+            height: 10%;
+            background-color: darkorchid;
+            color: white;
+            float: left;
+            border-style: none;
+            visibility: hidden;
+            border-radius: 2%;
+        }
+        .detail h2,p,span{
+            display: block;
+            /*border: 1px solid #121bff;*/
+
+        }
+
+        .detail p{
+            color: darkgrey;
+        }
+        .detail span{
+            text-align: right;
+            color:#f9683a;
+
+        }
+
+        #img1{
+            background-image: url(auto/benz-amg-s63-01.jpg);
+        }
+        #img2{
+            background-image: url(auto/benz-amg-s63-02.jpg);
+        }
+        #img3{
+            background-image: url(auto/tesla-roadster-2018-01.jpg);
+        }
+        h2{
+            color: grey;
+        }
+        .position{
+            width: 100px;
+            height: 100px;
+            background-color: lawngreen;
+            margin: 20px;
+            position: relative;
+        }
+        .dot{
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+            position:absolute;
+            right: -10px;
+            top:-10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="position">
+        <div class="dot">
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="buyGoods">
+            <div class="image" id="img1">
+                <div class="active">
+                    <span>11.11</span>
+                </div>
+            </div>
+            <div class="detail">
+                <h2>tesla-roadster</h2>
+                <p>The quickest car in the world.with record -setting acleration,range and performances
+                </p>
+                <span>$200,000</span>
+            </div>
+            <button>Buy</button>
+        </div>
+
+        <div class="buyGoods">
+            <div class="image" id="img2">
+                <div class="active">
+                    <span>11.11</span>
+                </div>
+            </div>
+
+            <div class="detail">
+                <h2>tesla-roadster</h2>
+                <p>The quickest car in the world.with record -setting acleration,range and performances
+                </p>
+                <span>$200,000</span>
+
+            </div>
+            <button>Buy</button>
+        </div>
+
+        <div class="buyGoods">
+            <div class="image" id="img3">
+                <div class="active">
+                    <span>11.11</span>
+                </div>
+            </div>
+
+            <div class="detail">
+                <h2>tesla-roadster</h2>
+                <p>The quickest car in the world.with record -setting acleration,range and performances
+                </p>
+                <span>$200,000</span>
+
+            </div>
+            <button>Buy</button>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <div class="abc"></div><br>
+
+    <div class="abc2">拆</div>
+
+    <div class="abc3"></div>
+
+    <div class="abc4"></div>
+
+    <div class="abc5"></div>
+
+    <div class="block">1</div>
+    <div class="block">2</div>
+    <div class="block">3</div>
+    <div class="block">4</div><br>
+</body>
+</html>

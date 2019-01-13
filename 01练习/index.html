@@ -79,9 +79,14 @@
             overflow: hidden;
             margin: 10px;
             box-shadow: 2px 2px 7px grey;
+            transition: all linear .5s;
+            transform: rotateY(50deg);
+            perspective: 100px;
         }
         .buyGoods:hover{
             box-shadow: 3px 3px 13px grey;
+
+            transform: rotateY(0deg);
         }
         .buyGoods:hover button{
             visibility: visible;
@@ -149,13 +154,13 @@
         }
 
         #img1{
-            background-image: url(auto/benz-amg-s63-01.jpg);
+            background-image: url(../resource/auto/benz-amg-s63-01.jpg);
         }
         #img2{
-            background-image: url(auto/benz-amg-s63-02.jpg);
+            background-image: url(../resource/auto/benz-amg-s63-02.jpg);
         }
         #img3{
-            background-image: url(auto/tesla-roadster-2018-01.jpg);
+            background-image: url(../resource/auto/tesla-roadster-2018-01.jpg);
         }
         h2{
             color: grey;
@@ -166,6 +171,18 @@
             background-color: lawngreen;
             margin: 20px;
             position: relative;
+            box-shadow: 1px 1px 10px grey;
+            border:10px solid #fcfafa;
+            -webkit-transform: rotateY(45deg);
+            -moz-box-shadow:0 3px 10px #888;
+            /*-webkit-box-shadow:0 3px 10px #888;*/
+            -webkit-transition-property: transform;
+            -webkit-transition-duration: 0.5s; }
+        .position:hover {
+            -webkit-transform: rotateY(0deg);
+        }
+        .position:hover{
+            webkit-perspective: 5000;
         }
         .dot{
             width: 30px;

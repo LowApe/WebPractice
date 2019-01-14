@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            width: 70%;
+            height:200px;
+            border: 1px solid black;
+            display: flex;
+            /*flex-flow: column wrap;*/
+            /*justify-content: space-around;*/
+            /*align-items: center;*/
+            justify-content: space-between;
+            align-items: flex-end;
+
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        #d1{
+            background-color: #fa5788;
+            /*flex: 2;*/
+        }
+        #d2{
+            background-color: #f9683a;
+            /*width: 100px;*/
+        }
+        #d3{
+            background-color: #76ffff;
+            /*flex: 1;*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box" id="d1">d1</div>
+    <div class="box" id="d2">d2</div>
+    <div class="box" id="d3">d3</div>
+</div>
+</body>
+</html>

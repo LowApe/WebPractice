@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <style>
+        .container{
+
+            border:1px solid red;
+        }
+        .box{
+            width:100px;
+            height: 100px;
+            float: left;//添加浮动后父布局不能检测到有填充
+        }
+        #d1{
+
+            background-color: #fa5788;
+        }
+        #d2{
+
+            background-color: #62fa7a;
+        }
+
+        #d3{
+            width:150px;
+            height: 150px;
+            /*父布局可以检测d3*/
+            background-color: #76ffff;
+            clear: both;    /*弄明白这个属性*/
+        }
+        p{
+
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+
+       <div class="box" id="d1">d1</div>
+       <div class="box" id="d2">d2</div>
+       <div  id="d3">d3</div>
+       <br >
+   </div>
+</body>
+</html>

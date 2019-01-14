@@ -1,0 +1,60 @@
+
+
+#content{
+    background-color: #e0e0e0;
+    flex: 1;
+    overflow: scroll;
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+}
+
+.message{
+    display: flex;
+    padding: 5px;
+    border-bottom: 1px solid grey;
+}
+
+.message_left{
+
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/头像1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.message_right{
+    flex: 1;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.message_right_up{
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message_right_up_name{
+font-size: 17px;
+    font-weight: 700;
+}
+.message_right_up_time{
+    color: grey;
+
+}
+.message_right_down{
+    height: 28px;
+    display: flex;
+    justify-content:space-between;
+}
+.message_right_down_msg{
+
+}
+.message_right_down_volume{
+    margin-right: 10px;
+}

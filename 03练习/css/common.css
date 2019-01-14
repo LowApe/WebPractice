@@ -15,14 +15,14 @@
     flex-flow: column ;
 }
 
-#title{
-    background-color: #76ffff;
-    height: 50px;
+.xy-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-#content{
-    background-color: #ec79ff;
-    flex: 1;
+/**/
+::-webkit-scrollbar{
+    display: none;
 }
 
 #menu{

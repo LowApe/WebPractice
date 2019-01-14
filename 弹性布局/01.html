@@ -11,15 +11,17 @@
         .box{
             width:100px;
             height: 100px;
-            float: left;//添加浮动后父布局不能检测到有填充
+            /*float: left;//添加浮动后父布局不能检测到有填充*/
         }
         #d1{
 
             background-color: #fa5788;
+            float: left;
         }
         #d2{
 
             background-color: #62fa7a;
+            float: left;
         }
 
         #d3{
@@ -27,7 +29,8 @@
             height: 150px;
             /*父布局可以检测d3*/
             background-color: #76ffff;
-            clear: both;    /*弄明白这个属性*/
+            /*float:left;*/
+            clear: left;    /*弄明白这个属性*/
         }
         p{
 
@@ -38,9 +41,10 @@
    <div class="container">
 
        <div class="box" id="d1">d1</div>
+
        <div class="box" id="d2">d2</div>
        <div  id="d3">d3</div>
-       <br >
+       <!--<br >-->
    </div>
 </body>
 </html>

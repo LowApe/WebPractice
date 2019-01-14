@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" media="screen and (orientation:protrait)" href="">
+    <!--任何纵向放置的显示屏设备都会加载portrait-screen.css样式表，其他设备则会忽略该文件-->
     <style>
         <!--媒体查询需要先从最大屏幕开始,否则无法识别-->
         body {
@@ -26,6 +28,8 @@
                 background-color: #76ffff;
             }
         }
+
+        @import url("xxx.css") screen and (max-width: 360px);
 
     </style>
 </head>

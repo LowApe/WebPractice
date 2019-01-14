@@ -14,7 +14,10 @@
     display: flex;
     flex-flow: column ;
 }
-
+.text_color{
+    font-size: 12px;
+    color: grey;
+}
 .xy-center{
     display: flex;
     align-items: center;
@@ -25,9 +28,5 @@
     display: none;
 }
 
-#menu{
-    background-color: #ffea57;
-    height: 50px;
-}
 
 

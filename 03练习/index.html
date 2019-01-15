@@ -51,21 +51,23 @@
                 <div id="triangle"></div>
                 <ul>
                     <a href="">
-                        <li>1</li>
+                        <li>发起群聊</li>
                     </a>
 
                     <a href="">
-                        <li>1</li>
+                        <li>添加朋友</li>
                     </a>
 
                     <a href="">
-                        <li>1</li>
+                        <li>扫一扫</li>
                     </a>
 
                     <a href="">
-                        <li>1</li>
+                        <li>收付款</li>
                     </a>
-
+                    <a href="">
+                        <li>帮助与反馈</li>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -74,6 +76,7 @@
 
     <div id="search" class=" xy-center">
         <div class="webkit xy-center">
+            <input type="text" class="search_input border">
             <div class="text_color">搜索</div>
             <div>🔍</div>
             <div>🚏</div>
@@ -264,27 +267,94 @@
 
     </div>
     <div class="footer" id="menu">
-        <div>
-            <img src="" alt="">
-            微信
+        <div id="menu_weChat">
+            <img src="img/微信%20(1).svg" alt="" id="menu_one">
+            <div class="menu_text menu_one change color_yes" id="weChat" >微信</div>
         </div>
-        <div>
-            <img src="" alt="">
-            通讯录
+        <div id="menu_al">
+
+            <img src="img/通讯录.svg" id="menu_two" alt="" class="">
+            <div class="menu_text menu_two change ">通讯录</div>
         </div>
-        <div>
-            <img src="" alt="">
-            发现
+        <div id="menu_find">
+            <img src="img/发现.svg" id="menu_three" alt="" class="">
+            <div class="menu_text menu_three change ">发现</div>
         </div>
-        <div>
-            <img src="" alt="">
-            我
+        <div id="menu_me">
+            <img src="img/我.svg" id="menu_four" alt="" class="">
+            <div class="menu_text menu_four change ">我</div>
         </div>
     </div>
 </div>
 <script>
-    $("#title_right").click(function () {
-        $("#title_popup").toggle(300)
+    let imgs = [//定义数组用来存储图片的路径
+        'img/微信.svg',
+        'img/通讯录.svg',
+        'img/发现.svg',
+        'img/我.svg'
+
+    ];
+
+    let imgs_copy = [//定义数组用来存储图片的路径
+        'img/微信%20(1).svg',
+        'img/通讯录%20(1).svg',
+        'img/发现%20(1).svg',
+        'img/我%20(1).svg'
+
+    ];
+
+
+    $('#title_right').click(function () {
+        $('#title_popup').toggle(300)
+    })
+
+    $('#menu_weChat').click(function () {
+        $('#menu_one').attr('src',imgs_copy[0]);//动态改变图片的路径
+        $('#menu_two').attr('src',imgs[1]);
+        $('#menu_three').attr('src',imgs[2]);
+        $('#menu_four').attr('src',imgs[3]);
+
+        $('.menu_one').addClass("color_yes").removeClass("color_no");
+        $('.menu_two').removeClass("color_yes").addClass("color_no");
+        $('.menu_three').removeClass("color_yes").addClass("color_no");
+        $('.menu_four').removeClass("color_yes").addClass("color_no");
+    })
+
+    $('#menu_al').click(function () {
+        $('#menu_one').attr('src',imgs[0]);//动态改变图片的路径
+        $('#menu_two').attr('src',imgs_copy[1]);
+        $('#menu_three').attr('src',imgs[2]);
+        $('#menu_four').attr('src',imgs[3]);
+
+
+        $('.menu_one').removeClass("color_yes").addClass("color_no");
+        $('.menu_two').addClass("color_yes").removeClass("color_no");
+        $('.menu_three').removeClass("color_yes").addClass("color_no");
+        $('.menu_four').removeClass("color_yes").addClass("color_no");
+    })
+
+    $('#menu_find').click(function () {
+        $('#menu_one').attr('src',imgs[0]);//动态改变图片的路径
+        $('#menu_two').attr('src',imgs[1]);
+        $('#menu_three').attr('src',imgs_copy[2]);
+        $('#menu_four').attr('src',imgs[3]);
+
+        $('.menu_one').removeClass("color_yes").addClass("color_no");
+        $('.menu_two').removeClass("color_yes").addClass("color_no");
+        $('.menu_three').addClass("color_yes").removeClass("color_no");
+        $('.menu_four').removeClass("color_yes").addClass("color_no");
+    })
+
+    $('#menu_me').click(function () {
+        $('#menu_one').attr('src',imgs[0]);//动态改变图片的路径
+        $('#menu_two').attr('src',imgs[1]);
+        $('#menu_three').attr('src',imgs[2]);
+        $('#menu_four').attr('src',imgs_copy[3]);
+
+        $('.menu_one').removeClass("color_yes").addClass("color_no");
+        $('.menu_two').removeClass("color_yes").addClass("color_no");
+        $('.menu_three').removeClass("color_yes").addClass("color_no");
+        $('.menu_four').addClass("color_yes").removeClass("color_no");
     })
 </script>
 </body>

@@ -15,3 +15,8 @@
 .text_color{
     /*margin-left: 10px;*/
 }
+.search_input{
+    z-index: -1;
+    position: absolute;
+    left: 100px;
+}

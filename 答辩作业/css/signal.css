@@ -1,0 +1,111 @@
+#status{
+    background-color: #000000;
+    height: 24px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+#status_left{
+    flex: 1;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+#status_center{
+    width: 50px;
+    height: 36px;
+}
+#status_right{
+    flex: 1;
+    height: 36px;
+}
+#signal{
+    width: 50px;
+    /*height: 36px;*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#signal li{
+    width: 3px;
+    list-style: none;
+    margin-left: 3px;
+    border-radius: 20% 20% 0 0;
+}
+
+#signal li:nth-child(1){
+    height: 4px;
+}
+#signal li:nth-child(2){
+    height: 8px;
+}
+#signal li:nth-child(3){
+    height: 12px;
+}
+#signal li:nth-child(4){
+    height: 16px;
+}
+.signal_ok{
+    background-color: white;
+}
+.signal_no{
+    background-color: gray;
+}
+
+#operator{
+
+}
+#communication{
+    margin-left: 5px;
+}
+#status_center{
+    display: flex;
+    align-items: center;
+}
+
+#status_right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#battery{
+    width: 22px;
+    height: 10px;
+    border: 1px solid white;
+
+}
+
+#battery_body{
+    width: 22px;
+    height: 10px;
+    animation: charge 3s linear ;
+}
+
+#battery_header{
+    height: 6px;
+    width: 3px;
+    background-color: white;
+    border-radius: 0 1px 1px 0;
+}
+
+@keyframes charge {
+    0%{
+        width: 25%;
+        background-color: red;
+    }
+    25%{
+        width: 50%;
+        background-color: #ffea57;
+    }
+
+    80%{
+        width: 100%;
+        background-color: #62fa7a;
+    }
+
+}

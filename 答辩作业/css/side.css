@@ -1,0 +1,20 @@
+.open_side{
+    position: absolute;
+    left: -1px;
+    width: 70%;
+    height: 100%;
+    background-color: #76ffff;
+    opacity:.5;
+    transform: translate(10px,10px);
+    transition: all 2s linear 10s;
+}
+.close_side{
+    display: none;
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*left: -0px;*/
+    /*width: 50%;*/
+    /*height: 100%;*/
+    /*background-color: #76ffff;*/
+    /*opacity:.5;*/
+}

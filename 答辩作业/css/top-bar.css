@@ -1,0 +1,86 @@
+.top-bar{
+    background-color: #009688;
+    display: flex;
+    height: 102px;
+    flex-flow:column wrap;
+
+}
+/********************top-ba三个子层********************/
+.top-bar-input{
+    height: 50px;
+}
+.top-bar-tab{
+    height:50px;
+    background-color: #009688;
+}
+
+/**************************************************/
+
+.input-bg-color{
+    width: 95%;
+    height:38px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    box-shadow: 0px 1px 50px grey;
+    z-index: 1;
+}
+/*******************input-bg-color有三个子层*********************/
+.top-bar-menu{
+    width: 50px;
+    height: 38px;
+    background-image: url("../img/侧边栏.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+}
+.top-bar-search{
+    flex: 1;
+}
+.top-bar-voice{
+    width: 50px;
+    height: 38px;
+    background-image: url("../img/语音.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+}
+
+.top-bar-search input{
+    border: none;
+    width: 100%;
+    height: 38px;
+    font-size: 20px;
+    outline: none;
+}
+
+/*********************top-bar-tab五个子层*****************************/
+.top-bar-tab ul li{
+    height: 50px;
+    text-decoration:none;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    color: #6EBFA5;
+    font-size: 20px;
+}
+.top-bar-tabs{
+    display: flex;
+    justify-content: space-around;
+}
+.top-bar-tabs-line{
+    float: left;
+}
+
+.top-bar-tab ul li:nth-child(n){
+    flex: 1;
+}
+.top-bar-tab ul li:active{
+    /*transition: all 1s ease-in;*/
+    color: white;
+    border-bottom: 2px solid white;
+}
+.top-bar-tab ul li:active .top-bar-tab{
+    background-color: #ffa8ff;
+}

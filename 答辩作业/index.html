@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-with,initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/signal.css">
+    <link rel="stylesheet" href="css/top-bar.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/side.css">
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--状态-->
+        <div class="header" id="status">
+            <div id="status_left" class="">
+                <ul id="signal" class="">
+                    <li class="signal_ok"></li>
+                    <li class="signal_ok"></li>
+                    <li class="signal_ok"></li>
+                    <li class="signal_no"></li>
+                </ul>
+                <div class="" id="operator">中国移动</div>
+                <div class="" id="communication">4G</div>
+            </div>
+            <div class="" id="status_center">
+                14:24
+            </div>
+            <div class="" id="status_right">
+                <div id="battery">
+                    <div id="battery_body">
+
+                    </div>
+                </div>
+                <div id="battery_header"></div>
+            </div>
+        </div>
+        <!--top-bar-->
+        <div class="top-bar">
+            <div class="top-bar-input xy-bottom">
+                <div class="input-bg-color ">
+                    <div class="top-bar-menu " id="menu">
+                        <div id="side" class="close_side">
+
+                        </div>
+                    </div>
+                    <div class="top-bar-search">
+                        <form action="">
+                            <input type="text" size="16px">
+                        </form>
+                    </div>
+                    <div class="top-bar-voice" id="voice"></div>
+                </div>
+            </div>
+            <div class="top-bar-tab">
+                <ul class="top-bar-tabs">
+                    <li class="top-bar-tabs-line" id="tab-1">首页</li>
+                    <li class="top-bar-tabs-line" id="tab-2">游戏</li>
+                    <li class="top-bar-tabs-line" id="tab-3">影视</li>
+                    <li class="top-bar-tabs-line" id="tab-4">图书</li>
+                    <li class="top-bar-tabs-line" id="tab-5">音乐</li>
+                </ul>
+            </div>
+            <div class="top-bar-child-tab"></div>
+        </div>
+
+        <!--content-->
+        <div class="content" id="dynamic">
+
+        </div>
+    </div>
+
+    <script>
+        $('#menu').click(function () {
+            $('#side').addClass('open_side');
+            $('#side').removeClass('close_side');
+        });
+        $('#voice').click(function () {
+
+        });
+
+        $('#tab-1').click(function () {
+
+        });
+
+        $('#tab-2').click(function () {
+
+        });
+
+        $('#tab-3').click(function () {
+
+        });
+    </script>
+</body>
+</html>

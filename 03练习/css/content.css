@@ -4,6 +4,8 @@
     background-color: #e0e0e0;
     flex: 1;
     overflow: scroll;
+    flex-flow: column wrap;
+    align-items: flex-start;
     /*display: flex;*/
     /*width: 100%;*/
     /*justify-content: space-between;*/
@@ -17,10 +19,9 @@
 }
 
 .message_left{
-
     width: 60px;
     height: 60px;
-    background-image: url("../img/头像1.jpg");
+    /*background-image: url("../img/头像1.jpg");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

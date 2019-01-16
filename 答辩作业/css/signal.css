@@ -1,4 +1,8 @@
 #status{
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
     background-color: #000000;
     height: 24px;
     display: flex;

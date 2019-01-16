@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport" content="width=device-with,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/signal.css">
     <link rel="stylesheet" href="css/top-bar.css">
-    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/content/content.css">
+    <link rel="stylesheet" href="css/main/main-recommend.css">
+    <link rel="stylesheet" href="css/main/main-content.css">
     <link rel="stylesheet" href="css/side.css">
     <script src="js/jquery.js"></script>
 </head>
@@ -42,7 +44,7 @@
         <div class="top-bar-input xy-bottom">
             <div class="input-bg-color ">
                 <div class="top-bar-menu " id="menu">
-                    <div id="side" class="open_side">
+                    <div id="side" class="close_side">
                         <div class="nav" id="side-scroll">
                             <div class="nav1">
                                 <div class="nav1-box"></div>
@@ -50,11 +52,9 @@
                                 <div id="name">曲家诚</div>
                                 <div id="email">didiaoyuan@gmail.com</div>
                             </div>
-                            <div class="nav2 ">
+                            <div class="nav2">
                                 <ul>
-                                    <li><img class="one" src="" alt="">
-                                        <div>我的应用和游戏</div>
-                                    </li>
+                                    <li><img class="one" src="" alt="">我的应用和游戏</li>
                                     <li><img class="two" src="" alt="">通知</li>
                                     <li><img class="three" src="" alt="">订阅</li>
                                     <li><img class="four" src="" alt="">心愿单</li>
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="top-bar-search">
-                    <form action="">
+                    <form action="https://play.google.com/store/search">
                         <input type="text" size="16px">
                     </form>
                 </div>
@@ -96,15 +96,16 @@
                 <li class="top-bar-tabs-line" id="tab-5">音乐</li>
             </ul>
         </div>
-        <div class="top-bar-child-tab"></div>
+        <div class="top-bar-child-tab" id="dynamic1">
+
+        </div>
+    </div>
+    <!--内容展现部分-->
+    <div class="top-bar-child-tab-content" id="dynamic2">
     </div>
 
-    <!--content-->
-    <div class="content" id="dynamic">
-
-    </div>
 </div>
-
+<!--jquery部分-->
 <script>
     $('#menu').click(function (e) {
         $('#side').addClass('open_side');
@@ -123,17 +124,51 @@
 
     });
 
-    $('#tab-1').click(function () {
-
+    $('#tab-1').ready(function () {
+        $('#dynamic1').load("page/main/main-recommend.html")
+        $('#dynamic2').load("page/main/main-content.html")
     });
 
     $('#tab-2').click(function () {
-
+        $('#dynamic1').load("page/main/main-recommend.html")
+        $('#dynamic2').load("page/main.html")
     });
 
     $('#tab-3').click(function () {
-
+        $('#dynamic1').load("page/main/main-recommend.html")
+        $('#dynamic2').load("page/main.html")
     });
+
+    $('#tab-4').click(function () {
+        $('#dynamic1').load("page/main/main-recommend.html")
+        $('#dynamic2').load("page/main.html")
+    });
+
+    $('#tab-5').click(function () {
+        $('#dynamic1').load("page/main/main-recommend.html")
+        // $('#dynamic2').load("page/main-recommend.html")
+    });
+    
+    /*子tab 点击事件*/
+    $('.tab-one').click(function () {
+        $('#dynamic2').load("page/main-recommend.html")
+    })
+
+    $('.tab-two').click(function () {
+        $('#dynamic2').load("page/main/main-recommend.html")
+    })
+    $('.tab-three').click(function () {
+        $('#dynamic2').load("page/main-recommend.html")
+    })
+    $('.tab-four').click(function () {
+        $('#dynamic2').load("page/main-recommend.html")
+    })
+    $('.tab-five').click(function () {
+        $('#dynamic2').load("page/main-recommend.html")
+    })
+    $('.tab-six').click(function () {
+        $('#dynamic2').load("page/main-recommend.html")
+    })
 </script>
 </body>
 </html>

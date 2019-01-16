@@ -1,0 +1,55 @@
+
+
+#dynamic1 ul {
+    list-style: none;
+    display: flex;
+    width: 130%;
+    height: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+#dynamic1 ul li {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #747474;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#dynamic1 img{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+}
+ .tab-one {
+    background-image: url("../../img/设置.svg");
+}
+
+.top-bar-child-tab .tab-two {
+    background-image: url("../../img/账号.svg");
+}
+
+.top-bar-child-tab .tab-three {
+    background-image: url("../../img/账号.svg");
+}
+
+.top-bar-child-tab .tab-four {
+    background-image: url("../../img/账号.svg");
+}
+
+.top-bar-child-tab .tab-five {
+    background-image: url("../../img/账号.svg");
+}
+
+.top-bar-child-tab .tab-six {
+    background-image: url("../../img/账号.svg");
+}
+
+
+/*#dynamic2{*/
+/*flex: 1;*/
+/*background-color: #EEEEEE;*/
+/*}*/

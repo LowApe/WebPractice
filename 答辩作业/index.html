@@ -12,86 +12,128 @@
     <script src="js/jquery.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!--状态-->
-        <div class="header" id="status">
-            <div id="status_left" class="">
-                <ul id="signal" class="">
-                    <li class="signal_ok"></li>
-                    <li class="signal_ok"></li>
-                    <li class="signal_ok"></li>
-                    <li class="signal_no"></li>
-                </ul>
-                <div class="" id="operator">中国移动</div>
-                <div class="" id="communication">4G</div>
-            </div>
-            <div class="" id="status_center">
-                14:24
-            </div>
-            <div class="" id="status_right">
-                <div id="battery">
-                    <div id="battery_body">
-
-                    </div>
-                </div>
-                <div id="battery_header"></div>
-            </div>
+<div class="container">
+    <!--状态-->
+    <div class="header" id="status">
+        <div id="status_left" class="">
+            <ul id="signal" class="">
+                <li class="signal_ok"></li>
+                <li class="signal_ok"></li>
+                <li class="signal_ok"></li>
+                <li class="signal_no"></li>
+            </ul>
+            <div class="" id="operator">中国移动</div>
+            <div class="" id="communication">4G</div>
         </div>
-        <!--top-bar-->
-        <div class="top-bar">
-            <div class="top-bar-input xy-bottom">
-                <div class="input-bg-color ">
-                    <div class="top-bar-menu " id="menu">
-                        <div id="side" class="close_side">
+        <div class="" id="status_center">
+            14:24
+        </div>
+        <div class="" id="status_right">
+            <div id="battery">
+                <div id="battery_body">
 
-                        </div>
-                    </div>
-                    <div class="top-bar-search">
-                        <form action="">
-                            <input type="text" size="16px">
-                        </form>
-                    </div>
-                    <div class="top-bar-voice" id="voice"></div>
                 </div>
             </div>
-            <div class="top-bar-tab">
-                <ul class="top-bar-tabs">
-                    <li class="top-bar-tabs-line" id="tab-1">首页</li>
-                    <li class="top-bar-tabs-line" id="tab-2">游戏</li>
-                    <li class="top-bar-tabs-line" id="tab-3">影视</li>
-                    <li class="top-bar-tabs-line" id="tab-4">图书</li>
-                    <li class="top-bar-tabs-line" id="tab-5">音乐</li>
-                </ul>
-            </div>
-            <div class="top-bar-child-tab"></div>
-        </div>
-
-        <!--content-->
-        <div class="content" id="dynamic">
-
+            <div id="battery_header"></div>
         </div>
     </div>
+    <!--top-bar-->
+    <div class="top-bar">
+        <div class="top-bar-input xy-bottom">
+            <div class="input-bg-color ">
+                <div class="top-bar-menu " id="menu">
+                    <div id="side" class="open_side">
+                        <div class="nav" id="side-scroll">
+                            <div class="nav1">
+                                <div class="nav1-box"></div>
+                                <img src="img/profile.jpg" alt="" id="profile">
+                                <div id="name">曲家诚</div>
+                                <div id="email">didiaoyuan@gmail.com</div>
+                            </div>
+                            <div class="nav2 ">
+                                <ul>
+                                    <li><img class="one" src="" alt="">
+                                        <div>我的应用和游戏</div>
+                                    </li>
+                                    <li><img class="two" src="" alt="">通知</li>
+                                    <li><img class="three" src="" alt="">订阅</li>
+                                    <li><img class="four" src="" alt="">心愿单</li>
+                                </ul>
+                            </div>
+                            <div class="nav3 ">
+                                <ul>
+                                    <li><img class="nav3-one" src="" class="border" alt="">账号</li>
+                                    <li><img class="nav3-two" src="" alt="">付款方式</li>
+                                    <li><img class="nav3-three" src="" alt="">Play保护机制</li>
+                                    <li><img class="nav3-four" src="" alt="">设置</li>
+                                </ul>
+                            </div>
+                            <div class="nav4">
+                                <ul>
+                                    <li>兑换</li>
+                                    <li>帮助与反馈</li>
+                                    <li>家长指南</li>
+                                    <li>关于Google Play</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-bar-search">
+                    <form action="">
+                        <input type="text" size="16px">
+                    </form>
+                </div>
+                <div class="top-bar-voice" id="voice"></div>
+            </div>
+        </div>
+        <div class="top-bar-tab">
+            <ul class="top-bar-tabs">
+                <li class="top-bar-tabs-line" id="tab-1">首页</li>
+                <li class="top-bar-tabs-line" id="tab-2">游戏</li>
+                <li class="top-bar-tabs-line" id="tab-3">影视</li>
+                <li class="top-bar-tabs-line" id="tab-4">图书</li>
+                <li class="top-bar-tabs-line" id="tab-5">音乐</li>
+            </ul>
+        </div>
+        <div class="top-bar-child-tab"></div>
+    </div>
 
-    <script>
-        $('#menu').click(function () {
-            $('#side').addClass('open_side');
-            $('#side').removeClass('close_side');
-        });
-        $('#voice').click(function () {
+    <!--content-->
+    <div class="content" id="dynamic">
 
-        });
+    </div>
+</div>
 
-        $('#tab-1').click(function () {
+<script>
+    $('#menu').click(function (e) {
+        $('#side').addClass('open_side');
+        $('#side').removeClass('close_side');
 
-        });
+    });
+    $(document).mouseup(function (e) {
+        let pop = $('#popDialog');
+        if (!pop.is(e.target) && pop.has(e.target).length === 0) {
+            // 可以在这里关闭弹窗
+            $('#side').addClass('close_side');
+            $('#side').removeClass('open_side');
+        }
+    });
+    $('#voice').click(function () {
 
-        $('#tab-2').click(function () {
+    });
 
-        });
+    $('#tab-1').click(function () {
 
-        $('#tab-3').click(function () {
+    });
 
-        });
-    </script>
+    $('#tab-2').click(function () {
+
+    });
+
+    $('#tab-3').click(function () {
+
+    });
+</script>
 </body>
 </html>

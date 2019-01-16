@@ -1,20 +1,176 @@
-.open_side{
+.open_side {
     position: absolute;
-    left: -1px;
+    top: 0px;
+    left: 0px;
     width: 70%;
     height: 100%;
-    background-color: #76ffff;
-    opacity:.5;
-    transform: translate(10px,10px);
-    transition: all 2s linear 10s;
+    /*background-color: #EEEEEE;*/
+    transform: translate(0px, 0px);
+    transition: all 2s;
 }
-.close_side{
-    display: none;
-    /*position: absolute;*/
-    /*top: 0px;*/
-    /*left: -0px;*/
-    /*width: 50%;*/
-    /*height: 100%;*/
-    /*background-color: #76ffff;*/
-    /*opacity:.5;*/
+
+.close_side {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 70%;
+    height: 100%;
+    background-color: #EEEEEE;
+    transform: translate(-100%, 0%);
+    transition: all 1s;
+}
+
+#side {
+
+    overflow: scroll;
+    text-align: left;
+}
+
+.nav li:hover {
+    opacity: 0.5;
+    background-color: #616161;
+}
+/**********************************************/
+.nav1 {
+    text-align: left;
+    height: 150px;
+    border-bottom: 2px solid white;
+    padding: 15px 15px 0 15px;
+    color: #d4e8ff;
+    /*background-image: url("../img/GooglePlay.png");*/
+    background-color: #616161;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#profile {
+
+}
+
+
+/*灰色图层*/
+/*.nav1-box {*/
+/*padding: 16px;*/
+/*position: absolute;*/
+/*height: 100px;*/
+/*opacity: 0.4;*/
+/*z-index: 0;*/
+/*background-color: grey;*/
+/*}*/
+
+.nav1 img, #name, #email {
+    position: relative;
+    z-index: 10;
+
+}
+
+.nav2 {
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.nav3 {
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.nav4 {
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/**********************************************/
+/*个人头像*/
+.nav1 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.nav2 li:nth-child(n) {
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    display: flex;
+}
+
+.nav2 img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin-right: 26px;
+}
+.nav2 .one{
+    background-image: url("../img/首页应用中心.svg");
+}
+.nav2 .two{
+    background-image: url("../img/通知.svg");
+}
+
+.nav2 .three{
+    background-image: url("../img/更新.svg");
+}
+
+.nav2 .four{
+    background-image: url("../img/我的心愿单.svg");
+}
+
+
+
+
+.nav3 li:nth-child(n) {
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    display: flex;
+}
+.nav3 img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin-right: 26px;
+}
+
+.nav3-one{
+    background-image: url("../img/账号.svg");
+}
+.nav3-two{
+    background-image: url("../img/银行卡.svg");
+}
+
+.nav3-three{
+    background-image: url("../img/保护.svg");
+}
+
+.nav3-four{
+    background-image: url("../img/设置.svg");
+}
+
+
+/*nav4*/
+.nav4 li:nth-child(n) {
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    display: flex;
+    padding-left: 40px;
 }

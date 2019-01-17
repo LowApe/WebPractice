@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/signal.css">
     <link rel="stylesheet" href="css/top-bar.css">
-    <link rel="stylesheet" href="css/content/content.css">
     <link rel="stylesheet" href="css/main/main-tab.css">
+    <link rel="stylesheet" href="css/video/video-content.css">
     <link rel="stylesheet" href="css/game/game-tab.css">
     <link rel="stylesheet" href="css/main/main-content.css">
     <link rel="stylesheet" href="css/game/game-content.css">
+    <link rel="stylesheet" href="css/video/video-content.css">
     <link rel="stylesheet" href="css/side.css">
     <script src="js/jquery.js"></script>
 </head>
@@ -110,12 +111,16 @@
 <!--jquery部分-->
 <script>
 
-    $('#menu ').ready(function () {
+    $('#menu').ready(function () {
+
         $("#dynamic1").load("page/main/main-tab.html")
+
     })
 
     $('.menu').click(function () {
+        // $("#dynamic1").hide()
         $("#dynamic1").load($(this).data("url"))
+        // $("#dynamic1").show(200)
         // console.log($(this).data("url"))
     })
 

@@ -1,10 +1,23 @@
 <ul class="">
-    <li><img class="tab-one bg-center" src="" alt="">电子书</li>
-    <li><img class="tab-two bg-center" src="" alt="">有声书</li>
-    <li><img class="tab-three bg-center" src="" alt="">漫画</li>
-    <li><img class="tab-four bg-center" src="" alt="">类别</li>
-    <li><img class="tab-five bg-center" src="" alt="">畅销</li>
-    <li><img class="tab-six bg-center" src="" alt="">新上架</li>
-    <li><img class="tab-six bg-center" src="" alt="">儿童读物</li>
-    <li><img class="tab-six bg-center" src="" alt="">热门免费</li>
+    <li class="tab-menu" data-url="page/book/book-content.htmlx"><img class="tab-one bg-center" src="" alt="">电子书</li>
+    <li class="tab-menu"><img class="tab-two bg-center" src="" alt="">有声书</li>
+    <li class="tab-menu"><img class="tab-three bg-center" src="" alt="">漫画</li>
+    <li class="tab-menu"><img class="tab-four bg-center" src="" alt="">类别</li>
+    <li class="tab-menu"><img class="tab-five bg-center" src="" alt="">畅销</li>
+    <li class="tab-menu"><img class="tab-six bg-center" src="" alt="">新上架</li>
+    <li class="tab-menu"><img class="tab-six bg-center" src="" alt="">儿童读物</li>
+    <li class="tab-menu"><img class="tab-six bg-center" src="" alt="">热门免费</li>
 </ul>
+
+<script>
+
+    $('.tab-menu').ready(function () {
+        $("#dynamic2").hide()
+        $("#dynamic2").load("page/book/book-content.html")
+        $("#dynamic2").show(200)
+    })
+    $('.tab-menu').click(function () {
+        // console.log($(this).data("url"))
+        $("#dynamic2").load($(this).data("url"))
+    })
+</script>

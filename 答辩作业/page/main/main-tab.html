@@ -10,7 +10,9 @@
 <script>
 
     $('.tab-menu').ready(function () {
+        $("#dynamic2").hide()
         $("#dynamic2").load("page/main/main-content.html")
+        $("#dynamic2").show(200)
     })
     $('.tab-menu').click(function () {
         // console.log($(this).data("url"))

@@ -18,95 +18,101 @@
 </head>
 <body>
 <div class="container">
-    <!--状态-->
-    <div class="header" id="status">
-        <div id="status_left" class="">
-            <ul id="signal" class="">
-                <li class="signal_ok"></li>
-                <li class="signal_ok"></li>
-                <li class="signal_ok"></li>
-                <li class="signal_no"></li>
-            </ul>
-            <div class="" id="operator">中国移动</div>
-            <div class="" id="communication">4G</div>
-        </div>
-        <div class="" id="status_center">
-            14:24
-        </div>
-        <div class="" id="status_right">
-            <div id="battery">
-                <div id="battery_body">
+    <div class="container-scroll">
+        <!--状态-->
+       <div id="status-bg" class="">
+           <div class="status-bg-opacity">
+               <div class="header" id="status">
+                   <div id="status_left" class="">
+                       <ul id="signal" class="">
+                           <li class="signal_ok"></li>
+                           <li class="signal_ok"></li>
+                           <li class="signal_ok"></li>
+                           <li class="signal_no"></li>
+                       </ul>
+                       <div class="" id="operator">中国移动</div>
+                       <div class="" id="communication">4G</div>
+                   </div>
+                   <div class="" id="status_center">
+                       14:24
+                   </div>
+                   <div class="" id="status_right">
+                       <div id="battery">
+                           <div id="battery_body">
 
-                </div>
-            </div>
-            <div id="battery_header"></div>
-        </div>
-    </div>
-    <!--top-bar-->
-    <div class="top-bar">
-        <div class="top-bar-input xy-bottom">
-            <div class="input-bg-color ">
-                <div class="top-bar-menu " id="menu">
-                    <div id="side" class="close_side">
-                        <div class="nav" id="side-scroll">
-                            <div class="nav1">
-                                <div class="nav1-box"></div>
-                                <img src="img/profile.jpg" alt="" id="profile">
-                                <div id="name">曲家诚</div>
-                                <div id="email">didiaoyuan@gmail.com</div>
-                            </div>
-                            <div class="nav2">
-                                <ul>
-                                    <li><img class="one" src="" alt="">我的应用和游戏</li>
-                                    <li><img class="two" src="" alt="">通知</li>
-                                    <li><img class="three" src="" alt="">订阅</li>
-                                    <li><img class="four" src="" alt="">心愿单</li>
-                                </ul>
-                            </div>
-                            <div class="nav3 ">
-                                <ul>
-                                    <li><img class="nav3-one" src="" class="border" alt="">账号</li>
-                                    <li><img class="nav3-two" src="" alt="">付款方式</li>
-                                    <li><img class="nav3-three" src="" alt="">Play保护机制</li>
-                                    <li><img class="nav3-four" src="" alt="">设置</li>
-                                </ul>
-                            </div>
-                            <div class="nav4">
-                                <ul>
-                                    <li>兑换</li>
-                                    <li>帮助与反馈</li>
-                                    <li>家长指南</li>
-                                    <li>关于Google Play</li>
-                                </ul>
+                           </div>
+                       </div>
+                       <div id="battery_header"></div>
+                   </div>
+               </div>
+           </div>
+       </div>
+        <!--top-bar-->
+        <div class="top-bar">
+            <div class="top-bar-input xy-bottom">
+                <div class="input-bg-color ">
+                    <div class="top-bar-menu " id="menu">
+                        <div id="side" class="close_side">
+                            <div class="nav" id="side-scroll">
+                                <div class="nav1">
+                                    <div class="nav1-box"></div>
+                                    <img src="img/profile.jpg" alt="" id="profile">
+                                    <div id="name">曲家诚</div>
+                                    <div id="email">didiaoyuan@gmail.com</div>
+                                </div>
+                                <div class="nav2">
+                                    <ul>
+                                        <li><img class="one" src="" alt="">我的应用和游戏</li>
+                                        <li><img class="two" src="" alt="">通知</li>
+                                        <li><img class="three" src="" alt="">订阅</li>
+                                        <li><img class="four" src="" alt="">心愿单</li>
+                                    </ul>
+                                </div>
+                                <div class="nav3 ">
+                                    <ul>
+                                        <li><img class="nav3-one" src="" class="border" alt="">账号</li>
+                                        <li><img class="nav3-two" src="" alt="">付款方式</li>
+                                        <li><img class="nav3-three" src="" alt="">Play保护机制</li>
+                                        <li><img class="nav3-four" src="" alt="">设置</li>
+                                    </ul>
+                                </div>
+                                <div class="nav4">
+                                    <ul>
+                                        <li>兑换</li>
+                                        <li>帮助与反馈</li>
+                                        <li>家长指南</li>
+                                        <li>关于Google Play</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="top-bar-search">
+                        <form action="https://play.google.com/store/search">
+                            <input id="search-click"  type="search" placeholder="Google Play" size="16px">
+                        </form>
+                    </div>
+                    <div class="top-bar-voice" id="voice"></div>
                 </div>
-                <div class="top-bar-search">
-                    <form action="https://play.google.com/store/search">
-                        <input type="text" size="16px">
-                    </form>
-                </div>
-                <div class="top-bar-voice" id="voice"></div>
+            </div>
+            <div class="top-bar-tab">
+                <ul class="top-bar-tabs">
+                    <li class="menu top-bar-tabs-line" id="tab-1" data-number="1" data-url="page/main/main-tab.html">首页</li>
+                    <li class="menu top-bar-tabs-line" id="tab-2" data-number="2" data-url="page/game/game-tab.html">游戏</li>
+                    <li class="menu top-bar-tabs-line" id="tab-3" data-number="3" data-url="page/video/video-tab.html">影视</li>
+                    <li class="menu top-bar-tabs-line" id="tab-4" data-number="4" data-url="page/book/book-tab.html">图书</li>
+                    <li class="menu top-bar-tabs-line" id="tab-5" data-number="5" data-url="page/music/music-tab.html">音乐</li>
+                </ul>
+            </div>
+            <div class="top-bar-child-tab" id="dynamic1">
+
             </div>
         </div>
-        <div class="top-bar-tab">
-            <ul class="top-bar-tabs">
-                <li class="menu top-bar-tabs-line" id="tab-1" data-url="page/main/main-tab.html">首页</li>
-                <li class="menu top-bar-tabs-line" id="tab-2" data-url="page/game/game-tab.html">游戏</li>
-                <li class="menu top-bar-tabs-line" id="tab-3" data-url="page/video/video-tab.html">影视</li>
-                <li class="menu top-bar-tabs-line" id="tab-4" data-url="page/book/book-tab.html">图书</li>
-                <li class="menu top-bar-tabs-line" id="tab-5" data-url="page/music/music-tab.html">音乐</li>
-            </ul>
+        <!--内容展现部分-->
+        <div class="top-bar-child-tab-content" id="dynamic2">
         </div>
-        <div class="top-bar-child-tab" id="dynamic1">
 
-        </div>
     </div>
-    <!--内容展现部分-->
-    <div class="top-bar-child-tab-content" id="dynamic2">
-    </div>
-
 </div>
 <!--jquery部分-->
 <script>
@@ -122,6 +128,43 @@
         $("#dynamic1").load($(this).data("url"))
         // $("#dynamic1").show(200)
         // console.log($(this).data("url"))
+
+    //    todo: 4. 切换头部的背景颜色
+
+            switch ($(this).data("number")) {
+                case 1:
+                    $(".top-bar").css('background-color','#009688');
+                    $(".top-bar-tab").css('background-color','#009688');
+                    $("#status-bg").css('background-color','#009688');
+                    break;
+                    //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
+                case 2:
+                    $(".top-bar").css('background-color','#EC407A');
+                    $(".top-bar-tab").css('background-color','#EC407A');
+                    $("#status-bg").css('background-color','#EC407A');
+                    break;
+                case 3:
+                    $(".top-bar").css('background-color','#2196F3');
+                    $(".top-bar-tab").css('background-color','#2196F3');
+                    $("#status-bg").css('background-color','#2196F3');
+                    break;
+                case 4:
+
+                    $(".top-bar").css('background-color','#f44336');
+                    $(".top-bar-tab").css('background-color','#f44336');
+                    $("#status-bg").css('background-color','#f44336');
+                    break;
+                case 5:
+                    $(".top-bar").css('background-color','#009688');
+                    $(".top-bar-tab").css('background-color','#009688');
+                    $("#status-bg").css('background-color','#009688');
+
+                    break;
+
+            }
+
+
+
     })
 
 
@@ -141,13 +184,23 @@
             $('#side').removeClass('open_side');
         }
     });
-    $('#voice').click(function () {
+    /*点击search显示信息*/
+    $('#search-click').click(function () {
+    //    todo: 1. 显示下层灰黑透明蒙版
 
+    //    todo: 2. 从input下调出搜索记录
+    //     $('#search-click').css('placeholder','搜索 Google Play')
+    //     $("#search-click").focus(function(){
+    //         document.activeElement.blur();
+    //     });
+    //    todo: 3. 从下方调出虚拟键盘
     });
+
+
     // /*主tab事件*/
     // $('#tab-1').click(function () {
     //     $('#dynamic1').load("page/main/main-tab.html")
-    //     $('#dynamic2').load("page/main/main-content.html")
+    //     $('#dynamic2').load("page/main/main-content-recommend.html")
     // });
     //
     // $('#tab-2').click(function () {

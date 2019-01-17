@@ -1,20 +1,23 @@
 <ul class="">
-    <li><img class="tab-one bg-center" src="" alt="">为您推荐</li>
-    <li><img class="tab-two bg-center" src="" alt="">热门歌曲</li>
-    <li><img class="tab-three bg-center" src="" alt="">热门专辑</li>
-    <li><img class="tab-four bg-center" src="" alt="">新上架</li>
-    <li><img class="tab-five bg-center" src="" alt="">艺术类型</li>
-    <li><img class="tab-six bg-center" src="" alt="">预订</li>
+    <li><i class="tab-menu tab-menu-icon " ><img class="tab-one bg-center" src="img/指南针.svg" alt=""></i>为您推荐</li>
+    <li><i class="tab-menu tab-menu-icon " ><img class="tab-two bg-center" src="img/音乐.svg" alt=""></i>热门歌曲</li>
+    <li><i class="tab-menu tab-menu-icon " ><img class="tab-three bg-center" src="img/cd.svg" alt=""></i>热门专辑</li>
+    <li><i class="tab-menu tab-menu-icon " ><img class="tab-four bg-center" src="img/星星.svg" alt=""></i>新上架</li>
+    <li><i class="tab-menu tab-menu-icon " ><img class="tab-five bg-center" src="img/分类.svg" alt=""></i>艺术类型</li>
 </ul>
 <script>
 
     $('.tab-menu').ready(function () {
-        $("#dynamic2").hide()
-        $("#dynamic2").load("page/video/video-content.html")
-        $("#dynamic2").show(200)
+        // $("#dynamic2").hide()
+        $("#dynamic2").load("page/music/music-content.html")
+        // $("#dynamic2").show(200)
     })
     $('.tab-menu').click(function () {
         // console.log($(this).data("url"))
         $("#dynamic2").load($(this).data("url"))
     })
+    //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
+    $('.tab-menu-icon img')
+        .css('filter', ' drop-shadow(30px 0 #009688)')
+
 </script>

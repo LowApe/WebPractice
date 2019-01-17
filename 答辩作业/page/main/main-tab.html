@@ -1,0 +1,19 @@
+
+<ul class="">
+    <li class="tab-menu" data-url="page/main/main-content.html"><img class="tab-one bg-center border" src="" alt="" >为您推荐</li>
+    <li class="tab-menu"><img class="tab-two bg-center border" src="" alt="">热门排行榜</li>
+    <li class="tab-menu"><img class="tab-three bg-center" src="" alt="">类别</li>
+    <li class="tab-menu"><img class="tab-four bg-center" src="" alt="">编辑精选</li>
+    <li class="tab-menu"><img class="tab-five bg-center" src="" alt="">家庭</li>
+    <li class="tab-menu"><img class="tab-six bg-center" src="" alt="">抢先体验</li>
+</ul>
+<script>
+
+    $('.tab-menu').ready(function () {
+        $("#dynamic2").load("page/main/main-content.html")
+    })
+    $('.tab-menu').click(function () {
+        // console.log($(this).data("url"))
+        $("#dynamic2").load($(this).data("url"))
+    })
+</script>

@@ -1,0 +1,19 @@
+<ul class="">
+    <li class="tab-menu" data-url="page/game/game-content.html"><img class="tab-one bg-center" src="img/账号.svg" alt="">为您推荐</li>
+    <li><img class="tab-two bg-center" src="" alt="">热门排行榜</li>
+    <li><img class="tab-three bg-center" src="" alt="">新游戏</li>
+    <li><img class="tab-four bg-center" src="" alt="">付费</li>
+    <li><img class="tab-five bg-center" src="" alt="">类别</li>
+    <li><img class="tab-six bg-center" src="" alt="">家庭</li>
+    <li><img class="tab-six bg-center" src="" alt="">编辑精选</li>
+</ul>
+<script>
+
+    $('.tab-menu').ready(function () {
+        $("#dynamic2").load("page/game/game-content.html")
+    })
+    $('.tab-menu').click(function () {
+        // console.log($(this).data("url"))
+        $("#dynamic2").load($(this).data("url"))
+    })
+</script>

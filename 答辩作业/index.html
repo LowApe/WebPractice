@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="css/signal.css">
     <link rel="stylesheet" href="css/top-bar.css">
     <link rel="stylesheet" href="css/content/content.css">
-    <link rel="stylesheet" href="css/main/main-recommend.css">
+    <link rel="stylesheet" href="css/main/main-tab.css">
+    <link rel="stylesheet" href="css/game/game-tab.css">
     <link rel="stylesheet" href="css/main/main-content.css">
+    <link rel="stylesheet" href="css/game/game-content.css">
     <link rel="stylesheet" href="css/side.css">
     <script src="js/jquery.js"></script>
 </head>
@@ -89,11 +91,11 @@
         </div>
         <div class="top-bar-tab">
             <ul class="top-bar-tabs">
-                <li class="top-bar-tabs-line" id="tab-1">首页</li>
-                <li class="top-bar-tabs-line" id="tab-2">游戏</li>
-                <li class="top-bar-tabs-line" id="tab-3">影视</li>
-                <li class="top-bar-tabs-line" id="tab-4">图书</li>
-                <li class="top-bar-tabs-line" id="tab-5">音乐</li>
+                <li class="menu top-bar-tabs-line" id="tab-1" data-url="page/main/main-tab.html">首页</li>
+                <li class="menu top-bar-tabs-line" id="tab-2" data-url="page/game/game-tab.html">游戏</li>
+                <li class="menu top-bar-tabs-line" id="tab-3" data-url="page/video/video-tab.html">影视</li>
+                <li class="menu top-bar-tabs-line" id="tab-4" data-url="page/book/book-tab.html">图书</li>
+                <li class="menu top-bar-tabs-line" id="tab-5" data-url="page/music/music-tab.html">音乐</li>
             </ul>
         </div>
         <div class="top-bar-child-tab" id="dynamic1">
@@ -107,6 +109,20 @@
 </div>
 <!--jquery部分-->
 <script>
+
+    $('#menu ').ready(function () {
+        $("#dynamic1").load("page/main/main-tab.html")
+    })
+
+    $('.menu').click(function () {
+        $("#dynamic1").load($(this).data("url"))
+        // console.log($(this).data("url"))
+    })
+
+
+
+
+
     $('#menu').click(function (e) {
         $('#side').addClass('open_side');
         $('#side').removeClass('close_side');
@@ -123,52 +139,53 @@
     $('#voice').click(function () {
 
     });
+    // /*主tab事件*/
+    // $('#tab-1').click(function () {
+    //     $('#dynamic1').load("page/main/main-tab.html")
+    //     $('#dynamic2').load("page/main/main-content.html")
+    // });
+    //
+    // $('#tab-2').click(function () {
+    //     $('#dynamic1').load("page/game/game-tab.html")
+    //     $('#dynamic2').load("page/main.html")
+    // });
+    //
+    // $('#tab-3').click(function () {
+    //     $('#dynamic1').load("page/video/video-tab.html")
+    //     $('#dynamic2').load("page/main.html")
+    // });
+    //
+    // $('#tab-4').click(function () {
+    //     $('#dynamic1').load("page/book/book-tab.html")
+    //     $('#dynamic2').load("page/main.html")
+    // });
+    //
+    // $('#tab-5').click(function () {
+    //     $('#dynamic1').load("page/music/music-tab.html")
+    //     // $('#dynamic2').load("page/main-tab.html")
+    // });
+    //
+    /*子tab 事件*/
 
-    $('#tab-1').ready(function () {
-        $('#dynamic1').load("page/main/main-recommend.html")
-        $('#dynamic2').load("page/main/main-content.html")
-    });
-
-    $('#tab-2').click(function () {
-        $('#dynamic1').load("page/main/main-recommend.html")
-        $('#dynamic2').load("page/main.html")
-    });
-
-    $('#tab-3').click(function () {
-        $('#dynamic1').load("page/main/main-recommend.html")
-        $('#dynamic2').load("page/main.html")
-    });
-
-    $('#tab-4').click(function () {
-        $('#dynamic1').load("page/main/main-recommend.html")
-        $('#dynamic2').load("page/main.html")
-    });
-
-    $('#tab-5').click(function () {
-        $('#dynamic1').load("page/main/main-recommend.html")
-        // $('#dynamic2').load("page/main-recommend.html")
-    });
-    
-    /*子tab 点击事件*/
-    $('.tab-one').click(function () {
-        $('#dynamic2').load("page/main-recommend.html")
-    })
-
-    $('.tab-two').click(function () {
-        $('#dynamic2').load("page/main/main-recommend.html")
-    })
-    $('.tab-three').click(function () {
-        $('#dynamic2').load("page/main-recommend.html")
-    })
-    $('.tab-four').click(function () {
-        $('#dynamic2').load("page/main-recommend.html")
-    })
-    $('.tab-five').click(function () {
-        $('#dynamic2').load("page/main-recommend.html")
-    })
-    $('.tab-six').click(function () {
-        $('#dynamic2').load("page/main-recommend.html")
-    })
+    // $('.tab-one').click(function () {
+    //     $('#dynamic2').load("page/main-tab.html")
+    // })
+    //
+    // $('.tab-two').click(function () {
+    //     $('#dynamic2').load("page/main/main-tab.html")
+    // })
+    // $('.tab-three').click(function () {
+    //     $('#dynamic2').load("page/main-tab.html")
+    // })
+    // $('.tab-four').click(function () {
+    //     $('#dynamic2').load("page/main-tab.html")
+    // })
+    // $('.tab-five').click(function () {
+    //     $('#dynamic2').load("page/main-tab.html")
+    // })
+    // $('.tab-six').click(function () {
+    //     $('#dynamic2').load("page/main-tab.html")
+    // })
 </script>
 </body>
 </html>

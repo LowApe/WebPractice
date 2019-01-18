@@ -170,14 +170,15 @@
        let contianer_scroll = $(this).scrollTop();   //卷动高度 // 看不见的部分
 
        let container_height = $(this).height();   //元素可见部分的高度
-       console.log(contianer_scroll)
-       console.log(container_totalHeight)
+       // console.log(contianer_scroll)
+       // console.log(container_totalHeight)
 
        if(contianer_scroll>97){
            $('.top-bar-child-tab').css('position','fixed').css('top','30px').css('z-index','100')
        }
        if(contianer_scroll<97){
-           $('.top-bar-child-tab').css('position','').css('top','').css('z-index',' ')
+           $('.top-bar-child-tab').css('position','')
+               .css('top','').css('z-index',' ')
        }
    })
 

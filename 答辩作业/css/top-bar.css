@@ -18,12 +18,14 @@
 
 .top-bar-tab {
     height: 52px;
+
     background-color: #009688;
 }
 
 /**************************************************/
 
 .input-bg-color {
+
     width: 95%;
     height: 38px;
     border-radius: 4px;
@@ -79,6 +81,8 @@
 
 .top-bar-tabs {
     display: flex;
+
+
     justify-content: space-around;
 }
 
@@ -88,6 +92,7 @@
 
 .top-bar-tab ul li:nth-child(n) {
     flex: 1;
+    color: #cccccc;
 }
 
 .top-bar-tab ul li:hover {

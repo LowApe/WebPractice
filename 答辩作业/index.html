@@ -147,163 +147,25 @@
     </div>
 </div>
 <!--jquery部分-->
+<script src="js/main-tab.js"></script>
+<script src="js/top-search.js"></script>
+<script src="js/top-side.js"></script>
 <script>
 
 
     /*进入页面加载首页*/
     $('#menu').ready(function () {
-
         $("#dynamic1").load("page/main/main-tab.html")
-
     })
-
-    $('.menu').click(function () {
-        // $("#dynamic1").hide()
-        $("#dynamic1").load($(this).data("url"))
-        // $("#dynamic1").show(200)
-        // console.log($(this).data("url"))
-
-        //    todo: 4. 切换头部的背景颜色
-
-        switch ($(this).data("number")) {
-            case 1:
-                $(".top-bar").css('background-color', '#009688');
-                $(".top-bar-tab").css('background-color', '#009688');
-                $("#status-bg").css('background-color', '#009688');
-                break;
-            //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
-            case 2:
-                $(".top-bar").css('background-color', '#EC407A');
-                $(".top-bar-tab").css('background-color', '#EC407A');
-                $("#status-bg").css('background-color', '#EC407A');
-                break;
-            case 3:
-                $(".top-bar").css('background-color', '#2196F3');
-                $(".top-bar-tab").css('background-color', '#2196F3');
-                $("#status-bg").css('background-color', '#2196F3');
-                break;
-            case 4:
-
-                $(".top-bar").css('background-color', '#f44336');
-                $(".top-bar-tab").css('background-color', '#f44336');
-                $("#status-bg").css('background-color', '#f44336');
-                break;
-            case 5:
-                $(".top-bar").css('background-color', '#009688');
-                $(".top-bar-tab").css('background-color', '#009688');
-                $("#status-bg").css('background-color', '#009688');
-
-                break;
-
-        }
-
-
-    })
-
-
-    $('#menu').click(function (e) {
-        $('#side').addClass('open_side');
-        $('#side').removeClass('close_side');
-
-    });
-    $(document).mouseup(function (e) {
-        let pop = $('#popDialog');
-        if (!pop.is(e.target) && pop.has(e.target).length === 0) {
-            // 可以在这里关闭弹窗
-            $('#side').addClass('close_side');
-            $('#side').removeClass('open_side');
-        }
-    });
-    $('#search-click').focus(function () {
-        /*当点击出现图层,并添加搜索历史*/
-        let item = $("<div id=\"top-bar-onfocus\" >\n" +
-            "            <div class=\"top-bar-onfocus top-bar-onfocus\" >\n" +
-            "            </div>\n" +
-            "            <!--显示历史记录-->\n" +
-            "            <div id=\"\" class=\"input-onfocus \">\n" +
-            "                <div class=\"input-onfocus-record \">\n" +
-            "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
-            "                    <div>历史记录</div>\n" +
-            "                </div>\n" +
-            "                <div class=\"input-onfocus-record \">\n" +
-            "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
-            "                    <div>历史记录</div>\n" +
-            "                </div>\n" +
-            "\n" +
-            "            </div>\n" +
-            "        </div>");
-        $('.container-scroll').append(item)
-        // $('#top-bar-onfocus').addClass('top-bar-onfocus');
-        $(document).mouseup(function (e) {
-            let pop = $('#search-click');
-            if (!pop.is(e.target) && pop.has(e.target).length === 0) {
-                // 可以在这里关闭弹窗
-                $('#top-bar-onfocus').remove()
-                // $('#top-bar-onfocus').removeClass('top-bar-onfocus');
-            }
-        });
-
-    })
-
-
-    //    todo: 2. 从input下调出搜索记录
-    //     $('#search-click').css('placeholder','搜索 Google Play')
-    //     $("#search-click").focus(function(){
-    //         document.activeElement.blur();
-    //     });
     //    todo: 3. 从下方调出虚拟键盘
     //    todo: 6. 滑动到上放,让子tab栏固定到顶部
     //    todo：7. 每个子tab页至少两个页面
     //    todo: 8. 点击语音按钮,显示
+    //    todo: 9. 轮播图
+    //    todo: 10. 延迟加载圆圈转动
+    //    todo: 11. 处理video 上下滑动问题
 
 
-    // /*主tab事件*/
-    // $('#tab-1').click(function () {
-    //     $('#dynamic1').load("page/main/main-tab.html")
-    //     $('#dynamic2').load("page/main/main-content-recommend.html")
-    // });
-    //
-    // $('#tab-2').click(function () {
-    //     $('#dynamic1').load("page/game/game-tab.html")
-    //     $('#dynamic2').load("page/main.html")
-    // });
-    //
-    // $('#tab-3').click(function () {
-    //     $('#dynamic1').load("page/video/video-tab.html")
-    //     $('#dynamic2').load("page/main.html")
-    // });
-    //
-    // $('#tab-4').click(function () {
-    //     $('#dynamic1').load("page/book/book-tab.html")
-    //     $('#dynamic2').load("page/main.html")
-    // });
-    //
-    // $('#tab-5').click(function () {
-    //     $('#dynamic1').load("page/music/music-tab.html")
-    //     // $('#dynamic2').load("page/main-tab.html")
-    // });
-    //
-    /*子tab 事件*/
-
-    // $('.tab-one').click(function () {
-    //     $('#dynamic2').load("page/main-tab.html")
-    // })
-    //
-    // $('.tab-two').click(function () {
-    //     $('#dynamic2').load("page/main/main-tab.html")
-    // })
-    // $('.tab-three').click(function () {
-    //     $('#dynamic2').load("page/main-tab.html")
-    // })
-    // $('.tab-four').click(function () {
-    //     $('#dynamic2').load("page/main-tab.html")
-    // })
-    // $('.tab-five').click(function () {
-    //     $('#dynamic2').load("page/main-tab.html")
-    // })
-    // $('.tab-six').click(function () {
-    //     $('#dynamic2').load("page/main-tab.html")
-    // })
 </script>
 </body>
 </html>

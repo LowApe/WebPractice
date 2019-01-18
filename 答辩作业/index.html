@@ -142,6 +142,7 @@
         </div>
         <!--内容展现部分-->
         <div class="top-bar-child-tab-content" id="dynamic2">
+
         </div>
 
     </div>
@@ -152,18 +153,23 @@
 <script src="js/top-side.js"></script>
 <script>
 
+    $('#search-click').focus(function () {
+        $('#search-click').removeClass('placeholder')
+        $('#search-click').addClass('','')
 
+    })
     /*进入页面加载首页*/
     $('#menu').ready(function () {
         $("#dynamic1").load("page/main/main-tab.html")
     })
-    //    todo: 3. 从下方调出虚拟键盘
+
     //    todo: 6. 滑动到上放,让子tab栏固定到顶部
     //    todo：7. 每个子tab页至少两个页面
     //    todo: 8. 点击语音按钮,显示
     //    todo: 9. 轮播图
     //    todo: 10. 延迟加载圆圈转动
     //    todo: 11. 处理video 上下滑动问题
+    //    todo: 12. search 点击后换预留信息
 
 
 </script>

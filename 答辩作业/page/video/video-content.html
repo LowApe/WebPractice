@@ -6,7 +6,22 @@
     <!--<link rel="stylesheet" href="../../css/main/main-content.css">-->
     <!--<meta name="viewport" content="width=device-with,initial-scale=1.0">-->
 <!--</head>-->
+<style>
+
+    #img {
+        margin-top: 20px;
+        height: 200px;
+        width: 97%;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px grey;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+</style>
 <body>
+    <div id="img" class="xy-center" style="background-image: url('img/v1.jpg')"></div>
     <div class="video-model">
         <div class="video-model-header">
             <div>之前安装的应用</div>
@@ -50,4 +65,26 @@
         </div>
     </div>
 </body>
+<script>
+    let index = 1;
+
+    let task;
+
+    function loadImg() {
+        if (index === 4) index = 1;
+        $("#img").css("background-image", "url(img/v" + index + ".jpg)");
+        index++;
+    }
+
+    $(function(){ //当页面加载时
+        task = setInterval("loadImg()" , 1000); //启动定时器
+        $("#img").mouseover(function(){ //鼠标经过
+            window.clearInterval(task);
+        });
+        $("#img").mouseout(function(){ //鼠标移出
+            task = setInterval("loadImg()", 1000);
+        })
+    })
+
+</script>
 <!--</html>-->

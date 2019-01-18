@@ -21,8 +21,21 @@
     font-size: 14px;
     font-weight: 600;
 }
-#dynamic1 ul li:hover{
-    border:1px solid grey;
+@keyframes move {
+    0%{
+        background: rgba(225, 225, 225, 0.2);
+    }
+    50%{
+        background: rgba(225, 225, 225, 0.3);
+    }
+    100%{
+        background: rgba(225, 225, 225, 0.6);
+    }
+}
+#dynamic1 ul li:active {
+    /*border:1px solid grey;*/
+    animation: move 0.2s linear;
+
 }
 .tab-menu-icon{
     width: 20px;

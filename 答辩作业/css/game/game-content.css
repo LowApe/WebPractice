@@ -31,9 +31,10 @@
 .game-tab-detail video{
     overflow: hidden;
     /*width: 100%;*/
-    width: 370px;
-    height: 270px;
+    width: 360px;
+    height: 200px;
     background-color: #ffea57;
+    z-index: 1;
 }
 .game-tab-content-recommend{
     display: flex;

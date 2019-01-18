@@ -13,7 +13,7 @@
     width:25px;
     height:25px;
     opacity:0;
-    background:rgba(255,255,255,0.3);
+    background:rgba(255,255,255,0.5);
     transition:all 1s linear;
     transition-property:transform, opacity, -webkit-transform;
     -webkit-transform:scale(0);

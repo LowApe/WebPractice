@@ -5,11 +5,16 @@
     height: 164px;
     flex-flow: column wrap;
 }
-
-/********************top-ba三个子层********************/
-.top-bar-input {
-    height: 50px;
+.top-bar-title{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+/********************top-ba三个子层********************/
+
+
+
 
 .top-bar-tab {
     height: 52px;
@@ -25,8 +30,8 @@
     background-color: #FFFFFF;
     text-align: center;
     display: flex;
-    box-shadow: 0px 1px 50px grey;
-    /*z-index: 1;*/
+    box-shadow: 0px 1px 5px grey;
+    z-index: 2;
 }
 
 /*******************input-bg-color有三个子层*********************/
@@ -111,5 +116,66 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+}
+
+
+/*   todo: 1. 显示下层灰黑透明蒙版*/
+
+.top-bar-input {
+    height: 50px;
+}
+
+.top-bar-search form{
+    display: flex;
+    flex-flow:column;
 
 }
+#top-bar-onfocus{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.top-bar-onfocus{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    /*align-items: center;*/
+    background-color: black;
+    opacity: 0.5;
+
+}
+
+.input-onfocus{
+    z-index: 4;
+    position: absolute;
+    width:95%;
+    top: 50px;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 1px 1px 5px white;
+}
+.input-onfocus-record{
+    display: flex;
+    /*justify-content: space-between;*/
+}
+.input-onfocus-record img{
+    width: 20px;
+    height: 20px;
+    margin: 1rem 0 1rem 1rem;
+}
+.input-onfocus-record div{
+    margin: 1rem 1rem 1rem  0;
+}
+
+
+

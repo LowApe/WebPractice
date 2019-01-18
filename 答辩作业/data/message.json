@@ -1,13 +1,23 @@
 [
   { "all":[
-    {"title":"New & updated games","application": [
-      {"img": "img/app1.png","name": "呆萌小怪物","grade": "4.7"},
-      {"img": "img/app2.png","name": "呆萌小怪物","grade": "4.7"},
-      {"img": "img/app3.png","name": "呆萌小怪物","grade": "4.7"},
-      {"img": "img/app4.png","name": "呆萌小怪物","grade": "4.7"},
-      {"img": "img/app5.png","name": "呆萌小怪物","grade": "4.7"},
-      {"img": "img/app6.png","name": "呆萌小怪物","grade": "4.7"},
-      {"img": "img/app7.png","name": "呆萌小怪物","grade": "4.7"}
+    {"theme":"根据您的近期活动","application": [
+      {"img": "img/app1.png","name": "YouTube","grade": "4.4★"},
+      {"img": "img/app2.png","name": "Gmail","grade": "4.3★"},
+      {"img": "img/app3.png","name": "地图","grade": "4.3★"},
+      {"img": "img/app4.png","name": "维基百科","grade": "4.4★"},
+      {"img": "img/app5.png","name": "TED","grade": "4.6★"},
+      {"img": "img/app6.png","name": "Titter","grade": "4.3★"},
+      {"img": "img/app7.png","name": "蓝灯:秒杀VPN","grade": "4.3★"}
+    ]
+    },
+    {"theme":"聊天工具","application": [
+      {"img": "img/app1.png","name": "QQ","grade": "4.7★"},
+      {"img": "img/app2.png","name": "微信","grade": "4.7★"},
+      {"img": "img/app3.png","name": "呆萌小怪物","grade": "4.7★"},
+      {"img": "img/app4.png","name": "呆萌小怪物","grade": "4.7★"},
+      {"img": "img/app5.png","name": "呆萌小怪物","grade": "4.7★"},
+      {"img": "img/app6.png","name": "呆萌小怪物","grade": "4.7★"},
+      {"img": "img/app7.png","name": "呆萌小怪物","grade": "4.7★"}
     ]
     }
   ]}

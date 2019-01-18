@@ -14,43 +14,62 @@
     <link rel="stylesheet" href="css/game/game-content.css">
     <link rel="stylesheet" href="css/video/video-content.css">
     <link rel="stylesheet" href="css/side.css">
+    <link rel="stylesheet" href="css/button.css">
     <script src="js/jquery.js"></script>
+    <script src="js/button.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="container-scroll">
-        <!--状态-->
-       <div id="status-bg" class="">
-           <div class="status-bg-opacity">
-               <div class="header" id="status">
-                   <div id="status_left" class="">
-                       <ul id="signal" class="">
-                           <li class="signal_ok"></li>
-                           <li class="signal_ok"></li>
-                           <li class="signal_ok"></li>
-                           <li class="signal_no"></li>
-                       </ul>
-                       <div class="" id="operator">中国移动</div>
-                       <div class="" id="communication">4G</div>
-                   </div>
-                   <div class="" id="status_center">
-                       14:24
-                   </div>
-                   <div class="" id="status_right">
-                       <div id="battery">
-                           <div id="battery_body">
+        <!--点击后出现的历史记录-->
+        <!--<div id="top-bar-onfocus" >-->
+            <!--<div class="top-bar-onfocus top-bar-onfocus" >-->
+            <!--</div>-->
+            <!--&lt;!&ndash;显示历史记录&ndash;&gt;-->
+            <!--<div id="" class="input-onfocus ">-->
+                <!--<div class="input-onfocus-record ">-->
+                    <!--<img src="img/历史记录.svg" alt="">-->
+                    <!--<div>历史记录</div>-->
+                <!--</div>-->
+                <!--<div class="input-onfocus-record ">-->
+                    <!--<img src="img/历史记录.svg" alt="">-->
+                    <!--<div>历史记录</div>-->
+                <!--</div>-->
 
-                           </div>
-                       </div>
-                       <div id="battery_header"></div>
-                   </div>
-               </div>
-           </div>
-       </div>
+            <!--</div>-->
+        <!--</div>-->
+        <!--状态-->
+        <div id="status-bg" class="">
+            <div class="status-bg-opacity">
+                <div class="header" id="status">
+                    <div id="status_left" class="">
+                        <ul id="signal" class="">
+                            <li class="signal_ok"></li>
+                            <li class="signal_ok"></li>
+                            <li class="signal_ok"></li>
+                            <li class="signal_no"></li>
+                        </ul>
+                        <div class="" id="operator">中国移动</div>
+                        <div class="" id="communication">4G</div>
+                    </div>
+                    <div class="" id="status_center">
+                        14:24
+                    </div>
+                    <div class="" id="status_right">
+                        <div id="battery">
+                            <div id="battery_body">
+
+                            </div>
+                        </div>
+                        <div id="battery_header"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--top-bar-->
         <div class="top-bar">
-            <div class="top-bar-input xy-bottom">
-                <div class="input-bg-color ">
+            <div class="top-bar-title">
+                <div class="input-bg-color">
                     <div class="top-bar-menu " id="menu">
                         <div id="side" class="close_side">
                             <div class="nav" id="side-scroll">
@@ -87,21 +106,34 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="top-bar-search">
+
                         <form action="https://play.google.com/store/search">
-                            <input id="search-click"  type="search" placeholder="Google Play" size="16px">
+                            <input id="search-click" type="search" placeholder="Google Play" size="16px">
+
                         </form>
                     </div>
                     <div class="top-bar-voice" id="voice"></div>
                 </div>
             </div>
-            <div class="top-bar-tab">
-                <ul class="top-bar-tabs">
-                    <li class="menu top-bar-tabs-line" id="tab-1" data-number="1" data-url="page/main/main-tab.html">首页</li>
-                    <li class="menu top-bar-tabs-line" id="tab-2" data-number="2" data-url="page/game/game-tab.html">游戏</li>
-                    <li class="menu top-bar-tabs-line" id="tab-3" data-number="3" data-url="page/video/video-tab.html">影视</li>
-                    <li class="menu top-bar-tabs-line" id="tab-4" data-number="4" data-url="page/book/book-tab.html">图书</li>
-                    <li class="menu top-bar-tabs-line" id="tab-5" data-number="5" data-url="page/music/music-tab.html">音乐</li>
+            <div class="top-bar-tab waves ">
+                <ul class="top-bar-tabs ">
+                    <li class="menu top-bar-tabs-line waves" id="tab-1" data-number="1"
+                        data-url="page/main/main-tab.html">首页
+                    </li>
+                    <li class="menu top-bar-tabs-line waves" id="tab-2" data-number="2"
+                        data-url="page/game/game-tab.html">游戏
+                    </li>
+                    <li class="menu top-bar-tabs-line waves" id="tab-3" data-number="3"
+                        data-url="page/video/video-tab.html">影视
+                    </li>
+                    <li class="menu top-bar-tabs-line waves" id="tab-4" data-number="4"
+                        data-url="page/book/book-tab.html">图书
+                    </li>
+                    <li class="menu top-bar-tabs-line waves" id="tab-5" data-number="5"
+                        data-url="page/music/music-tab.html">音乐
+                    </li>
                 </ul>
             </div>
             <div class="top-bar-child-tab" id="dynamic1">
@@ -117,6 +149,8 @@
 <!--jquery部分-->
 <script>
 
+
+    /*进入页面加载首页*/
     $('#menu').ready(function () {
 
         $("#dynamic1").load("page/main/main-tab.html")
@@ -129,46 +163,42 @@
         // $("#dynamic1").show(200)
         // console.log($(this).data("url"))
 
-    //    todo: 4. 切换头部的背景颜色
+        //    todo: 4. 切换头部的背景颜色
 
-            switch ($(this).data("number")) {
-                case 1:
-                    $(".top-bar").css('background-color','#009688');
-                    $(".top-bar-tab").css('background-color','#009688');
-                    $("#status-bg").css('background-color','#009688');
-                    break;
-                    //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
-                case 2:
-                    $(".top-bar").css('background-color','#EC407A');
-                    $(".top-bar-tab").css('background-color','#EC407A');
-                    $("#status-bg").css('background-color','#EC407A');
-                    break;
-                case 3:
-                    $(".top-bar").css('background-color','#2196F3');
-                    $(".top-bar-tab").css('background-color','#2196F3');
-                    $("#status-bg").css('background-color','#2196F3');
-                    break;
-                case 4:
+        switch ($(this).data("number")) {
+            case 1:
+                $(".top-bar").css('background-color', '#009688');
+                $(".top-bar-tab").css('background-color', '#009688');
+                $("#status-bg").css('background-color', '#009688');
+                break;
+            //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
+            case 2:
+                $(".top-bar").css('background-color', '#EC407A');
+                $(".top-bar-tab").css('background-color', '#EC407A');
+                $("#status-bg").css('background-color', '#EC407A');
+                break;
+            case 3:
+                $(".top-bar").css('background-color', '#2196F3');
+                $(".top-bar-tab").css('background-color', '#2196F3');
+                $("#status-bg").css('background-color', '#2196F3');
+                break;
+            case 4:
 
-                    $(".top-bar").css('background-color','#f44336');
-                    $(".top-bar-tab").css('background-color','#f44336');
-                    $("#status-bg").css('background-color','#f44336');
-                    break;
-                case 5:
-                    $(".top-bar").css('background-color','#009688');
-                    $(".top-bar-tab").css('background-color','#009688');
-                    $("#status-bg").css('background-color','#009688');
+                $(".top-bar").css('background-color', '#f44336');
+                $(".top-bar-tab").css('background-color', '#f44336');
+                $("#status-bg").css('background-color', '#f44336');
+                break;
+            case 5:
+                $(".top-bar").css('background-color', '#009688');
+                $(".top-bar-tab").css('background-color', '#009688');
+                $("#status-bg").css('background-color', '#009688');
 
-                    break;
+                break;
 
-            }
-
+        }
 
 
     })
-
-
-
 
 
     $('#menu').click(function (e) {
@@ -184,9 +214,37 @@
             $('#side').removeClass('open_side');
         }
     });
-    /*点击search显示信息*/
-    $('#search-click').click(function () {
-    //    todo: 1. 显示下层灰黑透明蒙版
+    $('#search-click').focus(function () {
+        /*当点击出现图层,并添加搜索历史*/
+        let item = $("<div id=\"top-bar-onfocus\" >\n" +
+            "            <div class=\"top-bar-onfocus top-bar-onfocus\" >\n" +
+            "            </div>\n" +
+            "            <!--显示历史记录-->\n" +
+            "            <div id=\"\" class=\"input-onfocus \">\n" +
+            "                <div class=\"input-onfocus-record \">\n" +
+            "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
+            "                    <div>历史记录</div>\n" +
+            "                </div>\n" +
+            "                <div class=\"input-onfocus-record \">\n" +
+            "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
+            "                    <div>历史记录</div>\n" +
+            "                </div>\n" +
+            "\n" +
+            "            </div>\n" +
+            "        </div>");
+        $('.container-scroll').append(item)
+        // $('#top-bar-onfocus').addClass('top-bar-onfocus');
+        $(document).mouseup(function (e) {
+            let pop = $('#search-click');
+            if (!pop.is(e.target) && pop.has(e.target).length === 0) {
+                // 可以在这里关闭弹窗
+                $('#top-bar-onfocus').remove()
+                // $('#top-bar-onfocus').removeClass('top-bar-onfocus');
+            }
+        });
+
+    })
+
 
     //    todo: 2. 从input下调出搜索记录
     //     $('#search-click').css('placeholder','搜索 Google Play')
@@ -194,7 +252,9 @@
     //         document.activeElement.blur();
     //     });
     //    todo: 3. 从下方调出虚拟键盘
-    });
+    //    todo: 6. 滑动到上放,让子tab栏固定到顶部
+    //    todo：7. 每个子tab页至少两个页面
+    //    todo: 8. 点击语音按钮,显示
 
 
     // /*主tab事件*/

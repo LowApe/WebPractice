@@ -102,8 +102,7 @@
 
 /*动态子tab页*/
 .top-bar-child-tab {
-    flex: 1;
-
+    height: 54px;
     width: 100%;
     background-color: #FFFFFF;
     box-shadow: 1px 1px 5px grey;

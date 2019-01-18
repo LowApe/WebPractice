@@ -163,6 +163,24 @@
         $("#dynamic1").load("page/main/main-tab.html")
     })
 
+
+   $('.container-scroll').scroll(function () {
+       let container_totalHeight = $('.top-bar-child-tab').scrollHeight;  //总高度
+
+       let contianer_scroll = $(this).scrollTop();   //卷动高度 // 看不见的部分
+
+       let container_height = $(this).height();   //元素可见部分的高度
+       console.log(contianer_scroll)
+       console.log(container_totalHeight)
+
+       if(contianer_scroll>97){
+           $('.top-bar-child-tab').css('position','fixed').css('top','30px').css('z-index','100')
+       }
+       if(contianer_scroll<97){
+           $('.top-bar-child-tab').css('position','').css('top','').css('z-index',' ')
+       }
+   })
+
     //    todo: 6. 滑动到上放,让子tab栏固定到顶部
     //    todo：7. 每个子tab页至少两个页面
     //    todo: 8. 点击语音按钮,显示

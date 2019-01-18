@@ -27,7 +27,91 @@
             <div>之前安装的应用</div>
             <div class="more" style="color: #009688">更多</div>
         </div>
-        <div class="video-show" id="video-show">
+        <div class="video-show" >
+            <div class="video-show-detail">
+                <img src="img/video1.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+            <div class="video-show-detail">
+                <img src="img/video2.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+            <div class="video-show-detail">
+                <img src="img/video3.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+            <div class="video-show-detail">
+                <img src="img/video4.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="video-model">
+        <div class="video-model-header">
+            <div>之前安装的应用</div>
+            <div class="more" style="color: #009688">更多</div>
+        </div>
+        <div class="video-show" >
+            <div class="video-show-detail">
+                <img src="img/video1.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+            <div class="video-show-detail">
+                <img src="img/video2.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+            <div class="video-show-detail">
+                <img src="img/video3.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+            <div class="video-show-detail">
+                <img src="img/video4.jpg" alt="">
+                <div class="video-layout">
+                    <div class="video-name">火气时代</div>
+                    <div>...</div>
+                </div>
+                <div class="grade">4.7</div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="video-model">
+        <div class="video-model-header">
+            <div>之前安装的应用</div>
+            <div class="more" style="color: #009688">更多</div>
+        </div>
+        <div class="video-show" >
             <div class="video-show-detail">
                 <img src="img/video1.jpg" alt="">
                 <div class="video-layout">
@@ -77,12 +161,12 @@
     }
 
     $(function(){ //当页面加载时
-        task = setInterval("loadImg()" , 1000); //启动定时器
+        task = setInterval("loadImg()" , 2000); //启动定时器
         $("#img").mouseover(function(){ //鼠标经过
             window.clearInterval(task);
         });
         $("#img").mouseout(function(){ //鼠标移出
-            task = setInterval("loadImg()", 1000);
+            task = setInterval("loadImg()", 2000);
         })
     })
 

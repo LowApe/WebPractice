@@ -20,6 +20,7 @@
     overflow-x: hidden;
     /*display: flex;*/
     /*flex-flow: column wrap;*/
+    background-color: #EEEEEE;
 }
 
 .xy-center{

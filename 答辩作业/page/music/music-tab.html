@@ -1,9 +1,9 @@
 <ul class="">
-    <li data-url="page/music/music-content-recommend.html"><i class="tab-menu tab-menu-icon " ><img class="tab-one bg-center" src="img/指南针.svg" alt=""></i>为您推荐</li>
-    <li data-url="page/music/music-content-recommend.html"><i class="tab-menu tab-menu-icon " ><img class="tab-two bg-center" src="img/音乐.svg" alt=""></i>热门歌曲</li>
-    <li data-url="page/music/music-content-recommend.html"><i class="tab-menu tab-menu-icon " ><img class="tab-three bg-center" src="img/cd.svg" alt=""></i>热门专辑</li>
-    <li data-url="page/music/music-content-recommend.html"><i class="tab-menu tab-menu-icon " ><img class="tab-four bg-center" src="img/星星.svg" alt=""></i>新上架</li>
-    <li data-url="page/music/music-content-recommend.html"><i class="tab-menu tab-menu-icon " ><img class="tab-five bg-center" src="img/分类.svg" alt=""></i>艺术类型</li>
+    <li class="tab-menu" data-url="page/music/music-content-recommend.html"><i class="tab-menu tab-menu-icon " ><img class="tab-one bg-center" src="img/指南针.svg" alt=""></i>为您推荐</li>
+    <li class="tab-menu" data-url="page/main/main-content-two.html"><i class="tab-menu tab-menu-icon " ><img class="tab-two bg-center" src="img/音乐.svg" alt=""></i>热门歌曲</li>
+    <li class="tab-menu" data-url="page/main/main-content-two.html"><i class="tab-menu tab-menu-icon " ><img class="tab-three bg-center" src="img/cd.svg" alt=""></i>热门专辑</li>
+    <li class="tab-menu" data-url="page/main/main-content-two.html"><i class="tab-menu tab-menu-icon " ><img class="tab-four bg-center" src="img/星星.svg" alt=""></i>新上架</li>
+    <li class="tab-menu" data-url="page/main/main-content-two.html"><i class="tab-menu tab-menu-icon " ><img class="tab-five bg-center" src="img/分类.svg" alt=""></i>艺术类型</li>
 </ul>
 <script>
 
@@ -16,7 +16,7 @@
     $('.tab-menu').click(function () {
         // console.log($(this).data("url"))
         $("#dynamic2").load($(this).data("url"))
-        $(".top-bar-child-tab-content").css('background-color', '#009688');
+        $(".top-bar-child-tab-content").css('background-color', '#009688');page/main/main-content-two.html
     })
     //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
     $('.tab-menu-icon img')

@@ -11,6 +11,7 @@ $('.menu').click(function () {
             $(".top-bar-tab").css('background-color', '#009688');
             $(".status-bg").css('background-color', '#009688');
             $(".nav1").css('background-color', '#009688');
+
             break;
         //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
         case 2:
@@ -18,6 +19,7 @@ $('.menu').click(function () {
             $(".top-bar-tab").css('background-color', '#EC407A');
             $(".status-bg").css('background-color', '#EC407A');
             $(".nav1").css('background-color', '#EC407A');
+
             break;
         case 3:
             $(".top-bar").css('background-color', '#2196F3');
@@ -30,12 +32,14 @@ $('.menu').click(function () {
             $(".top-bar-tab").css('background-color', '#f44336');
             $(".status-bg").css('background-color', '#f44336');
             $(".nav1").css('background-color', '#f44336');
+
             break;
         case 5:
             $(".top-bar").css('background-color', '#009688');
             $(".top-bar-tab").css('background-color', '#009688');
             $(".status-bg").css('background-color', '#009688');
             $(".nav1").css('background-color', '#009688');
+
             break;
     }
 })

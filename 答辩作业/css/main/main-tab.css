@@ -1,18 +1,19 @@
 
 
 #dynamic1 ul {
-
     list-style: none;
     display: flex;
-    width: 140%;
+    width: 150%;
     height: 100%;
-    /*flex-flow: row nowrap;*/
-    justify-content: space-around;
+    flex-flow: row;
+    justify-content: space-between;
     /*align-items: flex-start;*/
+    overflow: scroll;
 }
 
 #dynamic1 ul li:nth-child(n){
-    width: 90px;
+    /*width: 90px;*/
+    width: 90rem;
     display: flex;
     flex-flow: column;
     justify-content: center;

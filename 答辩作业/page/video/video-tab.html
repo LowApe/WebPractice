@@ -19,6 +19,7 @@
     $('.tab-menu').click(function () {
         $.ajax({cache: false})
         $("#dynamic2").load($(this).data("url"))
+        $(".top-bar-child-tab-content").css('background-color', '#2196F3');
     })
     //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)
     $('.tab-menu-icon img')

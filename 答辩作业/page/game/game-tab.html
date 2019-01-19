@@ -3,9 +3,9 @@
     <li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-two bg-center" src="img/行情.svg" alt=""></i>热门排行榜</li>
     <li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-three bg-center" src="img/星星.svg" alt=""></i>新游戏</li>
     <li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-four bg-center" src="img/钻石.svg" alt=""></i>付费</li>
-    <li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img c data-url="page/game/game-content.htmllass="tab-five bg-center" src="img/分类.svg" alt=""></i>类别</li>
-    <li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-six bg-center" src="img/星星.svg" alt=""></i>家庭</li>
-    <li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-six bg-center" src="img/精选.svg" alt=""></i>编辑精选</li>
+    <li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-four bg-center"  src="img/分类.svg" alt=""></i>类别</li>
+    <!--<li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-six bg-center" src="img/星星.svg" alt=""></i>家庭</li>-->
+    <!--<li class="tab-menu" data-url="page/game/game-content.html"><i class="tab-menu-icon "  ><img class="tab-six bg-center" src="img/精选.svg" alt=""></i>编辑精选</li>-->
 </ul>
 <script>
 
@@ -17,6 +17,7 @@
     $('.tab-menu').click(function () {
         // console.log($(this).data("url"))
         $("#dynamic2").load($(this).data("url"))
+        $(".top-bar-child-tab-content").css('background-color', '#EC407A');
     })
 
     //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)

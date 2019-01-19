@@ -19,46 +19,45 @@
     <script src="js/jquery.js"></script>
     <script src="js/button.js"></script>
     <script src="js/video.js"></script>
-    <script src="js/top-search.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="container-scroll">
         <!--点击后出现的历史记录-->
         <!--<div id="top-bar-onfocus" >-->
-            <!--<div class="top-bar-onfocus top-bar-onfocus" >-->
-            <!--</div>-->
-            <!--&lt;!&ndash;显示历史记录&ndash;&gt;-->
-            <!--<div id="" class="input-onfocus ">-->
-                <!--<div class="input-onfocus-record ">-->
-                    <!--<img src="img/历史记录.svg" alt="">-->
-                    <!--<div>历史记录</div>-->
-                <!--</div>-->
-                <!--<div class="input-onfocus-record ">-->
-                    <!--<img src="img/历史记录.svg" alt="">-->
-                    <!--<div>历史记录</div>-->
-                <!--</div>-->
+        <!--<div class="top-bar-onfocus top-bar-onfocus" >-->
+        <!--</div>-->
+        <!--&lt;!&ndash;显示历史记录&ndash;&gt;-->
+        <!--<div id="" class="input-onfocus ">-->
+        <!--<div class="input-onfocus-record ">-->
+        <!--<img src="img/历史记录.svg" alt="">-->
+        <!--<div>历史记录</div>-->
+        <!--</div>-->
+        <!--<div class="input-onfocus-record ">-->
+        <!--<img src="img/历史记录.svg" alt="">-->
+        <!--<div>历史记录</div>-->
+        <!--</div>-->
 
-            <!--</div>-->
+        <!--</div>-->
         <!--</div>-->
         <!--状态-->
-        <div  class="status-bg">
+        <div class="status-bg">
             <div class="status-bg-opacity">
-                <div class="status header" >
+                <div class="status header">
                     <div class="status_left">
-                        <ul  class="signal">
+                        <ul class="signal">
                             <li class="signal_ok"></li>
                             <li class="signal_ok"></li>
                             <li class="signal_ok"></li>
                             <li class="signal_no"></li>
                         </ul>
-                        <div class="operator" >中国移动</div>
+                        <div class="operator">中国移动</div>
                         <div class="communication">4G</div>
                     </div>
-                    <div class="status_center" >
+                    <div class="status_center">
                         14:24
                     </div>
-                    <div class="status_right" >
+                    <div class="status_right">
                         <div class="battery">
                             <div class="battery_body">
 
@@ -112,7 +111,9 @@
 
                     <div class="top-bar-search">
                         <form action="http://www.baidu.com/s">
-                            <input  name="keywords" class="sso_wk" x-webkit-speech=""  id="search-click" type="search" placeholder="Google Play" size="16px" onkeydown="if(event.keyCode==13){SiteSearch();return false};">
+                            <input name="keywords" class="sso_wk" x-webkit-speech="" id="search-click" type="search"
+                                   placeholder="Google Play" size="16px"
+                                   onkeydown="if(event.keyCode==13){SiteSearch();return false};">
                             <!--<input name="123" class="sso_an" type="button" onclick="SiteSearch();">-->
                         </form>
                     </div>
@@ -144,7 +145,6 @@
         </div>
         <!--内容展现部分-->
         <div class="top-bar-child-tab-content" id="dynamic2">
-
         </div>
 
     </div>
@@ -158,20 +158,21 @@
 </div>
 <!--jquery部分-->
 <script src="js/main-tab.js"></script>
-<script src="js/top-search.js"></script>
 <script src="js/top-side.js"></script>
 <script>
 
     //产品搜索并存值
     //搜索服务器
     let thisurl = "https://m.baidu.com/s?word=";
+
     function SiteSearch() {
         //获取输入的搜索信息
         let sszd = $("#search-click").val();
 
         setHistoryItems(sszd);
-        location.href = thisurl  + sszd + "";
+        location.href = thisurl + sszd + "";
     };
+
     //存值方法,新的值添加在首位
     function setHistoryItems(keyword) {
         let {historyItems} = localStorage;
@@ -182,6 +183,7 @@
             localStorage.historyItems = historyItems;
         }
     };
+
     //清除值
     function clearHistory() {
         localStorage.removeItem('historyItems');
@@ -221,15 +223,15 @@
                 for (let i = 0; i < strs.length; i++) {
                     s += "<div class=\"input-onfocus-record\">\n" +
                         "    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
-                        "  <div id=\"lsssjl\" class=\"rmssts\">"+strs[i]+"</div>\n" +
+                        "  <div id=\"lsssjl\" class=\"rmssts\">" + strs[i] + "</div>\n" +
                         "</div>";
                 }
-                let ss="<div id=\"top-bar-onfocus\">\n" +
+                let ss = "<div id=\"top-bar-onfocus\">\n" +
                     "    <div class=\"top-bar-onfocus top-bar-onfocus\">\n" +
                     "    </div>\n" +
                     "    <!--显示历史记录-->\n" +
                     "    <div id=\"\" class=\"input-onfocus \">\n" +
-                    "        \n" +s+
+                    "        \n" + s +
                     "        <input id=\"clearbtn\" type=\"button\" class=\"scls\" onclick=\"clearHistory();\" value=\"清除历史记录\">\n" +
                     "    </div>\n" +
                     "</div>"
@@ -248,15 +250,14 @@
     })
 
 
-
-/******************************************************/
-    $("#settings").click(function(){
-        $(".container").css('transform','translate(-100%)');
+    /******************************************************/
+    $("#settings").click(function () {
+        $(".container").css('transform', 'translate(-100%)');
         $("#find_page").load("page/settings/settings.html");
     })
     $('#search-click').focus(function () {
         $('#search-click').removeClass('placeholder')
-        $('#search-click').addClass('','')
+        $('#search-click').addClass('', '')
     })
     /*进入页面加载首页*/
     $('#menu').ready(function () {
@@ -264,28 +265,29 @@
     })
 
 
-   $('.container-scroll').scroll(function () {
-       let container_totalHeight = $('.top-bar-child-tab').scrollHeight;  //总高度
+    $('.container-scroll').scroll(function () {
+        let container_totalHeight = $('.top-bar-child-tab').scrollHeight;  //总高度
 
-       let contianer_scroll = $(this).scrollTop();   //卷动高度 // 看不见的部分
+        let contianer_scroll = $(this).scrollTop();   //卷动高度 // 看不见的部分
 
-       let container_height = $(this).height();   //元素可见部分的高度
-       // console.log(contianer_scroll)
-       // console.log(container_totalHeight)
+        let container_height = $(this).height();   //元素可见部分的高度
+        // console.log(contianer_scroll)
+        // console.log(container_totalHeight)
 
-       if(contianer_scroll>97){
-           $('.top-bar-child-tab').css('position','fixed').css('top','30px').css('z-index','1')
-       }
-       if(contianer_scroll<97){
-           $('.top-bar-child-tab').css('position','').css('top','')
-               .css('z-index',' ')
-       }
-   })
+        if (contianer_scroll > 97) {
+            $('.top-bar-child-tab').css('position', 'fixed').css('top', '30px').css('z-index', '1')
+        }
+        if (contianer_scroll < 97) {
+            $('.top-bar-child-tab').css('position', '').css('top', '')
+                .css('z-index', ' ')
+        }
+    })
 
     //    todo：7. 每个子tab页至少两个页面
     //    todo: 8. 点击语音按钮,显示
     //    todo: 10. 延迟加载圆圈转动
     //    todo: 12. search 点击后换预留信息
+    //    todo: 13. 5s 下适配
 
 
 </script>

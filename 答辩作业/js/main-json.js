@@ -7,19 +7,49 @@ $(function (){
 
     //请求   // 初始化加载
     $.getJSON('data/message.json' , function (results) {
-
         messages = results;
     });
 
     //生成页面
     function createItem(arr) {           //根据传入的数组内容   去渲染 item
         arr.forEach(function (e) {
-            console.log(e)
+
+            e.application.forEach(function (e) {
+                console.log(e.img)
+            });
+
             //替换成 自己的 HTML ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
-            let item = $("");
+            let item = $("<div class=\"recommend-model\">\n" +
+                "        <div class=\"recommend-model-header\">\n" +
+                "            <div>"+e.theme+"</div>\n" +
+                "            <div class=\"more\" style=\"color: #009688\">更多</div>\n" +
+                "        </div>\n" +
+                "        <div class=\"app-show\">\n" +
+                "            \n" +
+                "        </div>\n" +
+                "    </div>");
             //⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 
-            $("#app-show").append(item);
+            $("#dynamic2").append(item);
+
+
+
+
+            e.application.forEach(function (e) {
+
+                let item2 =$("<div class=\"app-show-detail\">\n" +
+                    "    <img src=\"http://ww1.sinaimg.cn/large/006rAlqhly1fzbvcdw97zj30dw0jfwge.jpg\"/>\n" +
+                    "    <div class=\"recommend-layout\">\n" +
+                    "        <div class=\"app-name\">"+e.name+"</div>\n" +
+                    "        <div>...</div>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"grade\">"+e.grade+"</div>\n" +
+                    "</div>");
+
+
+                $(".app-show").append(item2);
+            });
+
         })
 
     }

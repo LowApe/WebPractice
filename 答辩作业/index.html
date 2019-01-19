@@ -111,7 +111,7 @@
                     </div>
 
                     <div class="top-bar-search">
-                        <form action="www.baidu.com/s">
+                        <form action="http://www.baidu.com/s">
                             <input  name="keywords" class="sso_wk" x-webkit-speech=""  id="search-click" type="search" placeholder="Google Play" size="16px" onkeydown="if(event.keyCode==13){SiteSearch();return false};">
                             <!--<input name="123" class="sso_an" type="button" onclick="SiteSearch();">-->
                         </form>
@@ -164,13 +164,13 @@
 
     //产品搜索并存值
     //搜索服务器
-    let thisurl = "search.aspx?action=search";
+    let thisurl = "https://m.baidu.com/s?word=";
     function SiteSearch() {
         //获取输入的搜索信息
         let sszd = $("#search-click").val();
 
         setHistoryItems(sszd);
-        location.href = thisurl + "&sszd=" + sszd + "";
+        location.href = thisurl  + sszd + "";
     };
     //存值方法,新的值添加在首位
     function setHistoryItems(keyword) {
@@ -195,42 +195,6 @@
 
     $('#search-click').focus(function () {
         /*当点击出现图层,并添加搜索历史*/
-        // let item = $("<div id=\"top-bar-onfocus\" >\n" +
-        //     //     "            <div class=\"top-bar-onfocus top-bar-onfocus\" >\n" +
-        //     //     "            </div>\n" +
-        //     //     "            <!--显示历史记录-->\n" +
-        //     //     "            <div id=\"\" class=\"input-onfocus \">\n" +
-        //     //     "                <div class=\"input-onfocus-record \">\n" +
-        //     //     "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
-        //     //     "                    <div>历史记录</div>\n" +
-        //     //     "                </div>\n" +
-        //     //     "                <div class=\"input-onfocus-record \">\n" +
-        //     //     "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
-        //     //     "                    <div>历史记录</div>\n" +
-        //     //     "                </div>\n" +
-        //     //     "\n" +
-        //     //     "            </div>\n" +
-        //     //     "        </div>");
-        // let item = $("<div id=\"top-bar-onfocus\">\n" +
-        //     "    <div class=\"top-bar-onfocus top-bar-onfocus\">\n" +
-        //     "    </div>\n" +
-        //     "    <!--显示历史记录-->\n" +
-        //     "    <div id=\"\" class=\"input-onfocus \">\n" +
-        //     "        <div class=\"input-onfocus-record\">\n" +
-        //     "            <img src=\"img/历史记录.svg\" alt=\"\">\n" +
-        //     "            <div class=\"sslb\" id=\"lsssjl\"></div>\n" +
-        //     "        </div>\n" +
-        //     "        <div class=\"input-onfocus-record\">\n" +
-        //     "            <img src=\"img/历史记录.svg\" alt=\"\">\n" +
-        //     "            <div class=\"sslb\" id=\"lsssjl\"></div>\n" +
-        //     "        </div>\n" +
-        //     "    </div>\n" +
-        //     "</div>");
-        //
-        //
-        // $('.container-scroll').append(item)
-
-
         //取值写入页面
         $(function () {
             //获取保存的信息
@@ -274,13 +238,11 @@
             }
         });
 
-        // $('#top-bar-onfocus').addClass('top-bar-onfocus');
         $(document).mouseup(function (e) {
             let pop = $('#search-click');
             if (!pop.is(e.target) && pop.has(e.target).length === 0) {
                 // 可以在这里关闭弹窗
                 $('#top-bar-onfocus').remove()
-                // $('#top-bar-onfocus').removeClass('top-bar-onfocus');
             }
         });
     })

@@ -3,7 +3,7 @@
 
     margin: 6px;
     width: 97%;
-    height: 300px;
+    flex: 1;
     background-color: #FFFFFF;
     box-shadow: 2px 2px 10px grey;
     display: flex;
@@ -18,7 +18,11 @@
     display: flex;
     justify-content:space-between;
 }
-
+.book-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .book-show{
     flex: 1;
     overflow: scroll;
@@ -31,11 +35,19 @@
     margin: 10px;
 }
 .book-layout{
+    margin-top: 10px;
     display: flex;
     flex-flow:row;
+    justify-content: space-between;
 }
 .book-show img{
     width: 100px;
     height: 150px;
     background-color: #ffea57;
+}
+.book-bottom-layout{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
 }

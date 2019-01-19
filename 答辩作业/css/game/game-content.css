@@ -24,9 +24,10 @@
     flex-flow: row;
 }
 .game-tab-detail{
+    flex: 1;
     display: flex;
     flex-flow: column;
-    margin: 10px;
+    margin: 16px;
 }
 .game-tab-detail video{
     overflow: hidden;

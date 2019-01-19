@@ -32,7 +32,7 @@ $(function (){
                     "    <img src=\""+e.img+"\"/>\n" +
                     "    <div class=\"recommend-layout\">\n" +
                     "        <div class=\"app-name\">"+e.name+"</div>\n" +
-                    "        <div>...</div>\n" +
+                    "        <div>..</div>\n" +
                     "    </div>\n" +
                     "    <div class=\"grade\">"+e.grade+"</div>\n" +
                     "</div>");

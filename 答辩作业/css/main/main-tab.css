@@ -13,7 +13,7 @@
 
 #dynamic1 ul li:nth-child(n){
     /*width: 90px;*/
-    width: 90rem;
+    flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;

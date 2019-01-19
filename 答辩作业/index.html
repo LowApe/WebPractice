@@ -175,12 +175,12 @@
        // console.log(container_totalHeight)
 
        if(contianer_scroll>97){
-           $('.top-bar-child-tab').css('position','fixed').css('top','30px').css('z-index','100')
+           $('.top-bar-child-tab').css('position','fixed').css('z-index','1')
        }
-       // if(contianer_scroll<97){
-       //     $('.top-bar-child-tab').css('position','')
-       //         .css('top','').css('z-index',' ')
-       // }
+       if(contianer_scroll<97){
+           $('.top-bar-child-tab').css('position','')
+               .css('z-index',' ')
+       }
    })
 
     //    todo: 6. 滑动到上放,让子tab栏固定到顶部

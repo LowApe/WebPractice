@@ -11,10 +11,13 @@
 <script>
     $('.tab-menu').ready(function (){
         // $("#dynamic2").hide()
+        $.ajax({cache: false})
         $("#dynamic2").load("page/video/video-content.html")
+
         // $("#dynamic2").show(1000)
     })
     $('.tab-menu').click(function () {
+        $.ajax({cache: false})
         $("#dynamic2").load($(this).data("url"))
     })
     //    todo: 5. 给子 tab 键也添加颜色变换效果 (filters使用)

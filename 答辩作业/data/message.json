@@ -1,29 +1,21 @@
 [
   {"theme":"根据您的近期活动","application": [
     {"img": "img/app1.png","name": "YouTube","grade": "4.4★"},
-    {"img": "img/app2.png","name": "Gmail","grade": "4.3★"},
-    {"img": "img/app3.png","name": "地图","grade": "4.3★"},
-    {"img": "img/app4.png","name": "维基百科","grade": "4.4★"},
-    {"img": "img/app5.png","name": "TED","grade": "4.6★"},
-    {"img": "img/app6.png","name": "Titter","grade": "4.3★"},
-    {"img": "img/app7.png","name": "蓝灯:秒杀VPN","grade": "4.3★"}
+    {"img": "img/gmail.png","name": "Gmail","grade": "4.3★"}
   ]},
   {"theme":"聊天工具","application": [
-    {"img": "img/app1.png","name": "QQ","grade": "4.7★"},
-    {"img": "img/app2.png","name": "微信","grade": "4.7★"},
-    {"img": "img/app3.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app4.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app5.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app6.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app7.png","name": "呆萌小怪物","grade": "4.7★"}
+    {"img": "img/Disqus.svg","name": "Disqus","grade": "4.3★"},
+    {"img": "img/Snapchat.svg","name": "Snapchat","grade": "4.5★"},
+    {"img": "img/Twitter.svg","name": "Twitter","grade": "4.7★"},
+    {"img": "img/Facebook.svg","name": "facebook","grade": "4.6★"},
+    {"img": "img/weixin.svg","name": "微信","grade": "4.3★"}
   ]},
-  {"theme":"聊天工具2","application": [
-    {"img": "img/app1.png","name": "QQ","grade": "4.7★"},
-    {"img": "img/app2.png","name": "微信","grade": "4.7★"},
-    {"img": "img/app3.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app4.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app5.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app6.png","name": "呆萌小怪物","grade": "4.7★"},
-    {"img": "img/app7.png","name": "呆萌小怪物","grade": "4.7★"}
+  {"theme":"其他应用","application": [
+    {"img": "img/duolingo.svg","name": "duolingo","grade": "4.7★"},
+    {"img": "img/GitHub.svg","name": "GitHub","grade": "4.7★"},
+    {"img": "img/Pinterest.svg","name": "Pinterest","grade": "4.7★"},
+    {"img": "img/Dribbble.svg","name": "Dribblbe","grade": "4.7★"},
+    {"img": "img/app2.png","name": "swift","grade": "4.7★"},
+    {"img": "img/app4.png","name": "1","grade": "4.7★"}
   ]}
 ]

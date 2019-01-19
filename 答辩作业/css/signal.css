@@ -1,4 +1,4 @@
-#status-bg{
+.status-bg{
     width: 100%;
     height: 30px;
     position: fixed;
@@ -14,7 +14,7 @@
     opacity: 0.4;
     z-index: 17;
 }
-#status{
+.status{
     width: 100%;
     height: 30px;
     display: flex;
@@ -26,44 +26,52 @@
 
 
 }
-#status_left{
+.status_left{
     flex: 1;
     display: flex;
     flex-flow: row;
     align-items: center;
 }
-#status_center{
+.status_center{
     width: 50px;
     height: 36px;
+    display: flex;
+    align-items: center;
 }
-#status_right{
+.status_right{
     flex: 1;
     height: 36px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
 }
-#signal{
+
+.signal{
     width: 50px;
     /*height: 36px;*/
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
-#signal li{
+.signal li{
     width: 3px;
     list-style: none;
     margin-left: 3px;
     border-radius: 20% 20% 0 0;
 }
 
-#signal li:nth-child(1){
+.signal li:nth-child(1){
     height: 4px;
 }
-#signal li:nth-child(2){
+.signal li:nth-child(2){
     height: 8px;
 }
-#signal li:nth-child(3){
+.signal li:nth-child(3){
     height: 12px;
 }
-#signal li:nth-child(4){
+.signal li:nth-child(4){
     height: 16px;
 }
 .signal_ok{
@@ -73,38 +81,28 @@
     background-color: gray;
 }
 
-#operator{
+.operator{
     color: white;
 }
-#communication{
+.communication{
     margin-left: 5px;
 }
-#status_center{
-    display: flex;
-    align-items: center;
-}
 
-#status_right{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 10px;
-}
 
-#battery{
+.battery{
     width: 22px;
     height: 10px;
     border: 1px solid white;
 
 }
 
-#battery_body{
+.battery_body{
     width: 22px;
     height: 10px;
     animation: charge 3s linear ;
 }
 
-#battery_header{
+.battery_header{
     height: 6px;
     width: 3px;
     background-color: white;

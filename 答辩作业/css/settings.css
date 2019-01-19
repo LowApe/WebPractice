@@ -1,0 +1,43 @@
+#find_back{
+    width: 20px;
+    height: 20px;
+}
+.setting-title{
+    width: 100%;
+    padding: 0 16px 1px 16px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    flex-flow: row;
+    /*justify-content: space-between;*/
+    align-items: center;
+    box-shadow: 1px 1px 5px grey;
+}
+.setting-title-name{
+    margin-left: 10px;
+}
+.setting-content{
+    overflow: scroll;
+}
+.content-model{
+    border-bottom: 2px solid grey;
+}
+.content-model ul{
+    height: 50px;
+    width: 100%;
+
+}
+@keyframes move {
+     0%{
+         background: rgba(225, 225, 225, 0.2);
+     }
+     50%{
+         background: rgba(225, 225, 225, 0.3);
+     }
+     100%{
+         background: rgba(225, 225, 225, 0.6);
+     }
+ }
+.content-model ul:hover {
+    animation: move 1s linear;
+}

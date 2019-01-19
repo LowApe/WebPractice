@@ -115,10 +115,12 @@
 
 .top-bar-child-tab-content {
     width: 100%;
+
     flex: 1;
     background-color: #EEEEEE;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
 }
 

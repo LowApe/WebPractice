@@ -34,7 +34,6 @@
     width: 350px;
     height: 210px;
     /*background-color: #ffea57;*/
-    z-index: 1;
 }
 .game-tab-content-recommend{
     display: flex;

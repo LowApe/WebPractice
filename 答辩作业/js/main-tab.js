@@ -3,7 +3,6 @@ $('.menu').click(function () {
     $("#dynamic1").load($(this).data("url"))
     // $("#dynamic1").show(200)
     // console.log($(this).data("url"))
-
     //    todo: 4. 切换头部的背景颜色
 
     switch ($(this).data("number")) {

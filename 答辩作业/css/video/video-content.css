@@ -31,11 +31,21 @@
     margin: 10px;
 }
 .video-layout{
+    width: 100px;
     display: flex;
-    flex-flow:row;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .video-show img{
     width: 100px;
     height: 150px;
     background-color: #afafaf;
+}
+.video-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

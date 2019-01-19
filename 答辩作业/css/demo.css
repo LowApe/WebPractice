@@ -60,7 +60,7 @@ main .loaders .loader {
 .loading-bg{
 	width: 100%;
 	height: 40rem;
-	background-color: #9E9E9E;
+	background-color: #EEEEEE;
 	display: flex;
 	flex-flow: column-reverse;
 	justify-content: center;

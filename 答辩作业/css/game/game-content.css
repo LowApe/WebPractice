@@ -1,7 +1,7 @@
 .game-tab-model{
     margin: 6px;
     width: 97%;
-    height: 310px;
+    flex: 1;
     background-color: #FFFFFF;
     box-shadow: 2px 2px 10px grey;
     display: flex;
@@ -30,13 +30,15 @@
     margin: 16px;
 }
 .game-tab-detail video{
-    overflow: hidden;
+
     /*width: 100%;*/
-    width: 350px;
-    height: 280px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
     /*background-color: #ffea57;*/
 }
 .game-tab-content-recommend{
+    flex: 1;
     display: flex;
     margin-top: 10px;
 
@@ -47,10 +49,12 @@
     height: 50px;
 }
 .text-recommend{
+    padding: 0 1rem;
     flex: 1;
     display: flex;
     flex-flow: column;
-    /*justify-content: space-between;*/
+    justify-content: center;
+
     /*border: 1px solid red;*/
 }
 .text-up{
@@ -59,7 +63,11 @@
     justify-content: space-between;
 }
 .game-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .grade{
-
+    color: grey;
+    font-size: 1rem;
 }

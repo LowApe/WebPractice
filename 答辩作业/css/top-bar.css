@@ -196,7 +196,7 @@
     position: absolute;
     right: -100%;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     background: #FFFFFF;
 }
 

@@ -19,7 +19,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/button.js"></script>
     <script src="js/video.js"></script>
-    <script src="js/search-history.js"></script>
+    <script src="js/top-search.js"></script>
 </head>
 <body>
 <div class="container">
@@ -111,9 +111,9 @@
                     </div>
 
                     <div class="top-bar-search">
-
-                        <form action="#">
-                            <input id="search-click" type="search" placeholder="Google Play" size="16px">
+                        <form action="www.baidu.com/s">
+                            <input  name="keywords" class="sso_wk" x-webkit-speech=""  id="search-click" type="search" placeholder="Google Play" size="16px" onkeydown="if(event.keyCode==13){SiteSearch();return false};">
+                            <!--<input name="123" class="sso_an" type="button" onclick="SiteSearch();">-->
                         </form>
                     </div>
                     <div class="top-bar-voice" id="voice"></div>
@@ -162,6 +162,132 @@
 <script src="js/top-side.js"></script>
 <script>
 
+    //产品搜索并存值
+    //搜索服务器
+    let thisurl = "search.aspx?action=search";
+    function SiteSearch() {
+        //获取输入的搜索信息
+        let sszd = $("#search-click").val();
+
+        setHistoryItems(sszd);
+        location.href = thisurl + "&sszd=" + sszd + "";
+    };
+    //存值方法,新的值添加在首位
+    function setHistoryItems(keyword) {
+        let {historyItems} = localStorage;
+        if (historyItems === undefined) {
+            localStorage.historyItems = keyword;
+        } else {
+            historyItems = keyword + '|' + historyItems.split('|').filter(e => e != keyword).join('|');
+            localStorage.historyItems = historyItems;
+        }
+    };
+    //清除值
+    function clearHistory() {
+        localStorage.removeItem('historyItems');
+        let div = document.getElementById("lsssjl");
+        while (div.hasChildNodes()) //当div下还存在子节点时 循环继续
+        {
+            div.removeChild(div.firstChild);
+        }
+        $("#lsssjl").append('<div class="rmssts">暂无搜索记录...</div>');
+    }
+
+    $('#search-click').focus(function () {
+        /*当点击出现图层,并添加搜索历史*/
+        // let item = $("<div id=\"top-bar-onfocus\" >\n" +
+        //     //     "            <div class=\"top-bar-onfocus top-bar-onfocus\" >\n" +
+        //     //     "            </div>\n" +
+        //     //     "            <!--显示历史记录-->\n" +
+        //     //     "            <div id=\"\" class=\"input-onfocus \">\n" +
+        //     //     "                <div class=\"input-onfocus-record \">\n" +
+        //     //     "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
+        //     //     "                    <div>历史记录</div>\n" +
+        //     //     "                </div>\n" +
+        //     //     "                <div class=\"input-onfocus-record \">\n" +
+        //     //     "                    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
+        //     //     "                    <div>历史记录</div>\n" +
+        //     //     "                </div>\n" +
+        //     //     "\n" +
+        //     //     "            </div>\n" +
+        //     //     "        </div>");
+        // let item = $("<div id=\"top-bar-onfocus\">\n" +
+        //     "    <div class=\"top-bar-onfocus top-bar-onfocus\">\n" +
+        //     "    </div>\n" +
+        //     "    <!--显示历史记录-->\n" +
+        //     "    <div id=\"\" class=\"input-onfocus \">\n" +
+        //     "        <div class=\"input-onfocus-record\">\n" +
+        //     "            <img src=\"img/历史记录.svg\" alt=\"\">\n" +
+        //     "            <div class=\"sslb\" id=\"lsssjl\"></div>\n" +
+        //     "        </div>\n" +
+        //     "        <div class=\"input-onfocus-record\">\n" +
+        //     "            <img src=\"img/历史记录.svg\" alt=\"\">\n" +
+        //     "            <div class=\"sslb\" id=\"lsssjl\"></div>\n" +
+        //     "        </div>\n" +
+        //     "    </div>\n" +
+        //     "</div>");
+        //
+        //
+        // $('.container-scroll').append(item)
+
+
+        //取值写入页面
+        $(function () {
+            //获取保存的信息
+            let str = localStorage.historyItems;
+            let s = '';
+            //如果信息没有则显示无搜素记录
+            if (str == undefined) {
+                s = '<div id="top-bar-onfocus">\n' +
+                    '    <div class="top-bar-onfocus top-bar-onfocus">\n' +
+                    '    </div>\n' +
+                    '    <!--显示历史记录-->\n' +
+                    '    <div id="" class="input-onfocus ">\n' +
+                    '        <div class="input-onfocus-record">\n' +
+                    '            <img src="img/历史记录.svg" alt="">\n' +
+                    '            <div  id="lsssjl" class="rmssts">暂无搜索记录...</div>\n' +
+                    '        </div>\n' +
+                    '    </div>\n' +
+                    '</div>';
+                $(".container-scroll").append(s);
+            } else {
+                let strs = new Array();
+                strs = str.split("|");
+                //添加搜索记录到页面
+                for (let i = 0; i < strs.length; i++) {
+                    s += "<div class=\"input-onfocus-record\">\n" +
+                        "    <img src=\"img/历史记录.svg\" alt=\"\">\n" +
+                        "  <div id=\"lsssjl\" class=\"rmssts\">"+strs[i]+"</div>\n" +
+                        "</div>";
+                }
+                let ss="<div id=\"top-bar-onfocus\">\n" +
+                    "    <div class=\"top-bar-onfocus top-bar-onfocus\">\n" +
+                    "    </div>\n" +
+                    "    <!--显示历史记录-->\n" +
+                    "    <div id=\"\" class=\"input-onfocus \">\n" +
+                    "        \n" +s+
+                    "        <input id=\"clearbtn\" type=\"button\" class=\"scls\" onclick=\"clearHistory();\" value=\"清除历史记录\">\n" +
+                    "    </div>\n" +
+                    "</div>"
+
+                $(".container-scroll").append(ss);
+            }
+        });
+
+        // $('#top-bar-onfocus').addClass('top-bar-onfocus');
+        $(document).mouseup(function (e) {
+            let pop = $('#search-click');
+            if (!pop.is(e.target) && pop.has(e.target).length === 0) {
+                // 可以在这里关闭弹窗
+                $('#top-bar-onfocus').remove()
+                // $('#top-bar-onfocus').removeClass('top-bar-onfocus');
+            }
+        });
+    })
+
+
+
+/******************************************************/
     $("#settings").click(function(){
         $(".container").css('transform','translate(-100%)');
         $("#find_page").load("page/settings/settings.html");
@@ -198,6 +324,8 @@
     //    todo: 8. 点击语音按钮,显示
     //    todo: 10. 延迟加载圆圈转动
     //    todo: 12. search 点击后换预留信息
+
+
 </script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input name="keywords" id="search-click" type="text" class="sso_wk" x-webkit-speech="" autofocus placeholder="请输入您要搜索产品"
+       onkeydown="if(event.keyCode==13){SiteSearch();return false};">
+<!--<input name="" class="sso_an" type="button" onclick="SiteSearch();">-->
+<div class="sslb" id="lsssjl">
+</div>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+<script>
+    //产品搜索并存值
+    //搜索服务器
+    let thisurl = "search.aspx?action=search";
+
+    function SiteSearch() {
+        //获取输入的搜索信息
+        let sszd = $("#search-click").val();
+        setHistoryItems(sszd);
+        location.href = thisurl + "&sszd=" + sszd + "";
+    };
+    //取值写入页面
+    $(function () {
+        //获取保存的信息
+        let str = localStorage.historyItems;
+        let s = '';
+        //如果信息没有则显示无搜素记录
+        if (str == undefined) {
+            s = '<div class="rmssts">暂无搜索记录...</div>';
+            $("#lsssjl").append(s);
+        } else {
+            let strs = new Array();
+            strs = str.split("|");
+            //添加搜索记录到页面
+            for (let i = 0; i < strs.length; i++) {
+                s += "<a href='search.aspx?action=search&sszd=" + strs[i] + "' >" + strs[i] + "</a><br>";
+            }
+            $("#lsssjl").append(s + '<input type="button" class="scls" onclick="clearHistory();" value="清除历史记录">');
+        }
+    });
+
+    //存值方法,新的值添加在首位
+    function setHistoryItems(keyword) {
+        let {historyItems} = localStorage;
+        if (historyItems === undefined) {
+            localStorage.historyItems = keyword;
+        } else {
+            historyItems = keyword + '|' + historyItems.split('|').filter(e => e != keyword).join('|');
+            localStorage.historyItems = historyItems;
+        }
+    };
+
+    //清除值
+    function clearHistory() {
+        localStorage.removeItem('historyItems');
+        let div = document.getElementById("lsssjl");
+        while (div.hasChildNodes()) //当div下还存在子节点时 循环继续
+        {
+            div.removeChild(div.firstChild);
+        }
+        $("#lsssjl").append('<div class="rmssts">暂无搜索记录...</div>');
+    }
+</script>
+</body>
+</html>
+
+
+<!--<div class="input-onfocus-record">-->
+    <!--<img src="img/历史记录.svg" alt="">-->
+    <!--<a href="search.aspx?action=search&sszd="></a>-->
+<!--</div>-->
+
+<!--<div id="top-bar-onfocus">-->
+    <!--<div class="top-bar-onfocus top-bar-onfocus">-->
+    <!--</div>-->
+    <!--&lt;!&ndash;显示历史记录&ndash;&gt;-->
+    <!--<div id="" class="input-onfocus ">-->
+
+        <!--<input id="clearbtn" type="button" class="scls" onclick="clearHistory();" value="清除历史记录">-->
+    <!--</div>-->
+<!--</div>-->

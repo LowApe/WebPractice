@@ -20,12 +20,28 @@
     overflow: scroll;
 }
 .content-model{
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid #b1b1b1;
+    display: flex;
+    flex-flow: column;
 }
 .content-model ul{
+    padding: 10px;
+    list-style: none;
     height: 50px;
     width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /*align-items: center;*/
 
+}
+.content-model ul li:nth-child(2){
+    color: grey;
+    font-size: 14px;
+}
+.content-model-title{
+    color: grey;
+    font-size: 14px;
 }
 @keyframes move {
      0%{
@@ -40,4 +56,8 @@
  }
 .content-model ul:hover {
     animation: move 1s linear;
+}
+
+.content-model ul li{
+
 }

@@ -18,8 +18,6 @@
     height: 100%;
     overflow: scroll;
     overflow-x: hidden;
-    /*display: flex;*/
-    /*flex-flow: column wrap;*/
     background-color: #EEEEEE;
 }
 

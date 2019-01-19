@@ -7,7 +7,6 @@
     height: 100%;
     flex-flow: row;
     justify-content: space-between;
-    /*align-items: flex-start;*/
     overflow: scroll;
 }
 
@@ -34,7 +33,6 @@
     }
 }
 #dynamic1 ul li:active {
-    /*border:1px solid grey;*/
     animation: move 0.2s linear;
 
 }

@@ -35,17 +35,14 @@
 .recommend-layout{
     margin-top: 10px;
     display: flex;
-    /*border: 1px solid red;*/
     flex-flow:row;
     justify-content: space-between;
 }
 .recommend-layout div:nth-child(2){
-
     transform: rotate(90deg);
-    /*border: 1px solid red;*/
 }
 .app-show img{
     width: 100px;
     height: 100px;
-    /*background-color: #ffea57;*/
+
 }
